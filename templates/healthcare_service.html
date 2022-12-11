@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}">
+    <title>Portal Papuaprov - Satu Portal untuk semua Hal Tentang Papua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/media.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a91a27e46f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="topbar fixed-top animate__animated animate__fadeInDown">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a title="TFU" href="/"><img src="{{ url_for('static', filename='resources/images/logo/PAPUAPROVGOID.png')}}" alt="there for you home page" id="tfu"></a>
+                </div>
+                <button class="navbar-toggler animate__animated animate__fadeInRight" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <hr class="clearfix w-100 d-md-none margin animate__animated animate__fadeIn">
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                              <a class="nav-link dropdown-toggle">
+                                    <p class="navbar-link">About</p>
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/history">Sejarah</a>
+                                <a class="dropdown-item" href="/resources">Sumber Daya Alam</a>
+                                <a class="dropdown-item" href="/demography">Demografi</a>
+                              </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Map</p>
+                                </a>
+                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/maps">Peta Daerah</a>
+                                  <a class="dropdown-item" href="/culinary_tourism">Wisata Kuliner</a>
+                                  <a class="dropdown-item" href="/historical_tourism">Wisata Sejarah</a>
+                                  <a class="dropdown-item" href="/natural_tourism">Wisata Alam</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle" href="/government">
+                                      <p class="navbar-link">Government</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/government#Gubernur&WakilGubernur">Gubernur dan Wakil Gubernur</a>
+                                  <a class="dropdown-item" href="/government#Visi&Misi">Visi dan Misi</a>
+                                  <a class="dropdown-item" href="/government#StrukturOrganisasi">Struktur Organisasi</a>
+                                  <a class="dropdown-item" href="/government#AlamatKantor">Alamat Kantor</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Services & Information</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/population_service">Layanan Kependudukan</a>
+                                  <a class="dropdown-item" href="/healthcare_service">Layanan Kesehatan</a>
+                                  <a class="dropdown-item" href="/education_service">Layanan Pendidikan</a>
+                                </div>
+                            </li>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">About</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/history"><p class="navbar-link">Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/resources"><p class="navbar-link">Sumber Daya Alam</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/demography"><p class="navbar-link">Demografi</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Map</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/maps"><p class="navbar-link">Peta Daerah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/culinary_tourism"><p class="navbar-link">Wisata Kuliner</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/historical_tourism"><p class="navbar-link">Wisata Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/natural_tourism"><p class="navbar-link">Wisata Alam</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Government</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Gubernur&WakilGubernur"><p class="navbar-link">Gubernur dan Wakil Gubernur</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Visi&Misi"><p class="navbar-link">Visi dan Misi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#StrukturOrganisasi"><p class="navbar-link">Struktur Organisasi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#AlamatKantor"><p class="navbar-link">Alamat Kantor</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none">
+                                <h2 class="title-navbar">Services & Information</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/population_service"><p class="navbar-link">Layanan Kependudukan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/healthcare_service"><p class="navbar-link">Layanan Kesehatan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/education_service"><p class="navbar-link">Layanan Pendidikan</p></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div style="padding-top: 80px;">
+        <div class="fluit-container">
+            <div class="margin">
+                <div class="center grid" style="background-image: url({{ url_for('static', filename='resources/images/service/kesehatan.png')}});">
+                    <h1 class="title2 text-center responsive-title" style="color: white;" data-aos="fade-down" data-aos-duration="800">Layanan Kesehatan</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fluit-container">
+        <div class="accordion" id="accordionMain" data-aos="fade">
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="text1">Rumah Sakit</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseOne" class="card-body1 collapse show" aria-labelledby="headingOne">
+                    <div class="container">
+                        Jumlah penduduk kian bertambah, taraf kesehatannya pun harus meningkat.
+                        Selain puskesmas sebagai unit pelayanan kesehatan di tingkat kelurahan dan kecamatan,
+                        rumah sakit dengan pelayanan yang lebih lengkap dan luas tentu perlu ada serta terus berkembang.
+                        Berdasarkan data Dinas Kesehatan (Dinkes) pada 2018, di Papua ada 41 rumah sakit serta 1 rumah sakit bersalin.<br><br>
+
+                        Rumah sakit di Papua tidak hanya melayani warga Ibu Kota saja, namun juga warga pendatang yang bekerja dan berkegiatan di Papua.
+                        Dengan kesadaran masyarakat terhadap kesehatan semakin tinggi, kebutuhan pelayanan kesehatan juga meningkat.<br><br>
+
+                        Rumah sakit sebagai sebuah institusi pelayanan kesehatan profesional menghadirkan dokter, perawat, dan tenaga ahli kesehatan lainnya.
+                        Menurut Keputusan Menteri Kesehatan Republik Indonesia No 340/MENKES/PER/III/2010,
+                        “Rumah sakit adalah institusi pelayanan kesehatan yang menyelenggarakan pelayanan kesehatan perorangan
+                        secara paripurna yang menyediakan pelayanan rawat inap, rawat jalan, dan gawat darurat.”<br><br>
+
+                        Berdasarkan pengertian tersebut, rumah sakit tidak hanya penyedia pelayanan perawatan dan rehabilitasi,
+                        namun juga pelayanan pencegahan serta peningkatan kesehatan, tempat pendidikan dan pelatihan paramedis,
+                        hingga tempat penelitian serta pengembangan ilmu di bidang kesehatan.
+                        <div class="accordion" id="accordionSubOne" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subOne">
+                                    <span class="text1">Tugas dan Fungsi</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subOne" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        Untuk memberikan pelayanan kesehatan yang baik, berikut tugas dan fungsi dari rumah sakit:
+                                        <ul style="margin-left: -25px;">
+                                            <li>Melaksanakan pelayanan medis, pelayanan penunjang medis.</li>
+                                            <li>Melaksanakan pelayanan medis tambahan, pelayanan penunjang medis tambahan.</li>
+                                            <li>Melaksanakan pelayanan kedokteran kehakiman.</li>
+                                            <li>Melaksanakan pelayanan medis khusus.</li>
+                                            <li>Melaksanakan pelayanan rujukan kesehatan.</li>
+                                            <li>Melaksanakan pelayanan kedokteran gigi.</li>
+                                            <li>Melaksanakan pelayanan kedokteran sosial.</li>
+                                            <li>Melaksanakan pelayanan penyuluhan kesehatan.</li>
+                                            <li>Melaksanakan pelayanan rawat jalan atau rawat darurat dan rawat tinggal (observasi).</li>
+                                            <li>Melaksanakan pelayanan rawat inap.</li>
+                                            <li>Melaksanakan pelayanan administratif.</li>
+                                            <li>Melaksanakan pendidikan paramedis.</li>
+                                            <li>Membantu pendidikan tenaga medis umum.</li>
+                                            <li>Membantu pendidikan tenaga medis spesialis.</li>
+                                            <li>Membantu penelitian dan pengembangan kesehatan.</li>
+                                            <li>Membantu kegiatan penyelidikan epidemiologi.</li>
+                                        </ul>
+                                        Tugas dan fungsi ini berhubungan dengan kelas serta tipe rumah sakit yang terdiri dari rumah sakit umum dan rumah sakit khusus,
+                                        kelas A, B, C, D, E, berbentuk badan, serta sebagai unit pelaksana teknis daerah.
+                                        Perubahan kelas rumah sakit dapat saja terjadi sehubungan dengan kinerja rumah sakit yang ditetapkan Menteri Kesehatan melalui
+                                        keputusan Dirjen Pelayanan Medik.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subTwo">
+                                    <span class="text1">Jenis-Jenis Rumah Sakit</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subTwo" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        Berdasarkan Peraturan Menteri Kesehatan Nomor 147/Menkes/PER/I/2010 tentang Perizinan Rumah Sakit,
+                                        rumah sakit dikelompokkan berdasarkan kepemilikan, yaitu rumah sakit publik dan privat.
+                                        Rumah sakit publik adalah rumah sakit yang dikelola pemerintah, pemerintah daerah, serta badan hukum bersifat nirlaba.
+                                        Sedangkan rumah sakit privat adalah rumah sakit yang dikelola badan hukum dengan tujuan profit dan berbentuk perseroan terbatas atau persero.
+                                        <br><br>
+                                        Selain pengelompokan berdasarkan kepemilikan, rumah sakit juga memiliki lima tipe yaitu A, B, C, D, serta E yang disesuaikan dengan
+                                        tugas dan fungsinya, juga fasilitas dan penunjang medisnya. Berikut adalah tipe-tipe rumah sakit di Indonesia:<br><br>
+
+                                        <b>Rumah Sakit Tipe A</b><br>
+                                        Rumah sakit tipe ini merupakan rumah sakit pusat milik pemerintah yang mampu memberikan
+                                        pelayanan kedokteran spesialis dan subspesialis paling luas di Indonesia serta ditetapkan sebagai pelayanan rujukan tertinggi.<br>
+                                        Bagi pemilik kartu layanan kesehatan dari pemerintah, seperti BPJS (Badan Penyelenggara Jaminan Sosial) Kesehatan,
+                                        jika pasien tidak bisa ditangani di faskes (fasilitas kesehatan) tingkat 1 (puskesmas, klinik),
+                                        maka akan dirujuk ke faskes tingkat 2 (rumah sakit kabupaten).
+                                        Jika masih belum bisa ditangani, maka pasien akan dirujuk ke faskes tingkat 3, yaitu rumah sakit tipe A sebagai pelayanan rujukan tertinggi.
+                                        <br><br>
+
+                                        <b>Rumah Sakit Tipe B</b><br>
+                                        Rumah sakit tipe ini mampu memberikan pelayanan kedokteran medik spesialis luas dan subspesialis terbatas.
+                                        Rencananya, rumah sakit tipe ini akan didirikan di setiap ibu kota provinsi dan dapat menampung pelayanan rujukan dari rumah sakit kabupaten.
+                                        <br><br>
+
+                                        <b>Rumah Sakit Tipe C</b><br>
+                                        Rumah sakit tipe C mampu memberikan pelayanan kedokteran subspesialis terbatas.
+                                        Rumah sakit ini didirikan di kota atau kabupaten sebagai faskes tingkat 2 yang menampung rujukan faskes tingkat 1.
+                                        <br><br>
+
+                                        <b>Rumah Sakit Tipe D</b><br>
+                                        Rumah Sakit tipe D merupakan rumah sakit yang bersifat transisi menuju rumah sakit tipe C.
+                                        Pelayanan dan fasilitas rumah sakit tipe D lebih terbatas dibandingkan rumah sakit tipe C.
+                                        Meski begitu, sama halnya dengan rumah sakit tipe C, rumah sakit tipe D juga menampung rujukan pelayanan yang berasal dari puskesmas.
+                                        <br><br>
+
+                                        <b>Rumah Sakit Tipe E</b><br>
+                                        Rumah Sakit Kelas E adalah rumah sakit khusus (special hospital) yang memberikan pelayanan kesehatan tertentu.
+                                        Contohnya rumah sakit jiwa, kusta, paru, jantung, serta ibu dan anak.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <span class="text2">Puskesmas</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                </div>
+                <div id="collapseTwo" class="card-body2 collapse show" aria-labelledby="headingTwo">
+                    <div class="container">
+                        Sebagai upaya melayani masyarakat untuk mencapai kualitas kesehatan yang baik,
+                        Pusat Kesehatan Masyarakat (Puskesmas) hadir di Indonesia sejak 1968.
+                        Puskesmas dibangun agar pelayanan kesehatan masyarakat merata, cepat, serta terjangkau.<br><br>
+
+                        Puskesmas merupakan unit kesehatan yang paling dekat dengan masyarakat di tingkat kecamatan dan kelurahan di bawah Dinas Kesehatan Kabupaten/Kota.
+                        Pusat Kesehatan Masyarakat merupakan sistem pelayanan tingkat pertama atau primer dan terdepan.
+                        Puskesmas diharapkan tidak mengabaikan mutu pelayanan kesehatan kepada siapa pun. Unit kesehatan ini tidak hanya harus memberikan
+                        pelayanan kuratif dan rehabilitatif, seperti rawat jalan atau rawat inap, namun juga preventif serta kuratif.
+                        Hingga 2018, di Papua terdapat 422 puskesmas.
+                        <div class="accordion" id="accordionSubTwo" style="padding-top: 20px;">
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subOne">
+                                    <span class="text2">Tenaga Kesehatan di Puskesmas</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subOne" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Untuk meningkatkan kesehatan masyarakat, tenaga-tenaga kesehatan dikerahkan ke puskesmas-puskesmas yang terdiri dari:
+                                        <ol style="margin-left: -25px;">
+                                            <li>Dokter atau dokter layanan primer.</li>
+                                            <li>Dokter gigi.</li>
+                                            <li>Perawat.</li>
+                                            <li>Bidan.</li>
+                                            <li>Tenaga kesehatan masyarakat/lingkungan.</li>
+                                            <li>Teknik laboratorium medik.</li>
+                                            <li>Gizi.</li>
+                                            <li>Kefarmasian.</li>
+                                            <li>Dan penunjang kesehatan lainnya.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subTwo">
+                                    <span class="text2">Subunit Pelayanan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subTwo" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Untuk menjangkau masyarakat lebih dekat lagi, beberapa puskesmas memiliki subunit pelayanan, seperti:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Puskesmas Pembantu.</li>
+                                            <li>Puskesmas Keliling.</li>
+                                            <li>Posyandu (Pos Pelayanan Terpadu).</li>
+                                            <li>Pos Kesehatan Desa maupun Pos Bersalin Desa (Polindes).</li>
+                                        </ol>
+                                        Setiap subunit pelayanan ini disesuaikan keberadaannya dengan kebutuhan masyarakat sekitar puskesmas.
+                                        Selain subunit tersebut, puskesmas juga dibantu dengan KPLDH (Ketuk Pintu Layani Dengan Hati),
+                                        yang merupakan layanan kesehatan dari rumah ke rumah khusus untuk masyarakat kurang mampu.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subThree">
+                                    <span class="text2">Fungsi dan Tugas Puskesmas Kecamatan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subThree" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Fungsi utama puskesmas adalah menyehatkan penduduk. Untuk menjalankan fungsi utama tersebut, tugas Puskesmas Kecamatan di antaranya adalah:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Penyelenggaraan pelayanan kesehatan lingkungan.</li>
+                                            <li>Penyelenggaraan pelayanan kesehatan ibu dan anak serta keluarga berencana yang  bersifat UKM dan UKP.</li>
+                                            <li>Penyelenggaraan pelayanan gizi yang bersifat Upaya Kesehatan Masyarakat (UKM) dan Upaya Kesehatan Perorangan (UKP).</li>
+                                            <li>Penyelenggaraan pelayanan pencegahan dan pengendalian penyakit (surveillance).</li>
+                                            <li>Penyelenggaraan pelayanan keperawatan kesehatan masyarakat.</li>
+                                            <li>Penyelenggaraan upaya pengembangan pelayanan kesehatan jiwa, kesehatan gigi masyarakat, kesehatan tradisional komplementer,
+                                                kesehatan olahraga, kesehatan indera, kesehatan lansia, kesehatan kerja dan kesehatan lainnya.</li>
+                                            <li>Penyelenggaraan pelayanan medis umum dan spesialis terbatas.</li>
+                                            <li>Penyelenggaraan pelayanan kesehatan gigi dan mulut.</li>
+                                            <li>Penyelenggaraan pelayanan gawat darurat dan ambulans serta sistem rujukan.</li>
+                                            <li>Penyelenggaraan pelayanan persalinan dan rawat inap terbatas.</li>
+                                            <li>Penyelenggaraan pelayanan promosi kesehatan termasuk Usaha Kesehatan Sekolah (UKS).</li>
+                                            <li>Penyelenggaraan pelayanan kefarmasian dan laboratorium.</li>
+                                            <li>Penyelenggaraan pemeliharaan dan perawatan peralatan kedokteran, peralatan keperawatan,
+                                                peralatan perkantoran dan peralatan kesehatan lainnya.</li>
+                                            <li>Penyelenggaraan peningkatan dan penjaminan mutu pelayanan.</li>
+                                            <li>Penyelenggaraan keamanan dan keselamatan pasien.</li>
+                                            <li>Penanganan pengelolaan limbah medis.</li>
+                                            <li>Pemeriksaan jenazah.</li>
+                                            <li>Pemberdayaan Puskesmas Kelurahan.</li>
+                                            <li>Penyelenggaraan bimbingan praktik kerja lapangan untuk institusi yang telah ditentukan oleh Dinas Kesehatan.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subFour">
+                                    <span class="text2">Pendaftaran Pasien</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subFour" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Untuk melakukan pendaftaran mandiri, pasien dapat langsung mendatangi puskesmas terdekat.
+                                        Beberapa puskesmas di Papua sudah dilengkapi pendaftaran mandiri dengan mesin anjungan.
+                                        Tata cara mendaftar dengan mesin tersebut adalah sebagai berikut:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Pastikan pasien terdaftar di Fasilitas Kesehatan (Faskes) Puskesmas Kecamatan/Kelurahan terdekat.</li>
+                                            <li>Pastikan pasien membawa kartu BPJS (Badan Penyelenggara Jaminan Sosial Kesehatan)/
+                                                KIS (Kartu Indonesia Sehat)/Askes (Asuransi Kesehatan) atau KTP (Kartu Tanda Penduduk).</li>
+                                            <li>Pasien datang ke mesin anjungan dan melakukan scanning barcode yang ada di kartu BPJS/KIS/Askes.</li>
+                                            <li>Jika pasien tidak ada tunggakan BPJS, maka data pasien akan keluar di layar mesin.</li>
+                                            <li>Pasien memilih poli yang dituju dengan menekan poli tujuan.</li>
+                                            <li>Pasien melakukan print antrean.</li>
+                                            <li>Pasien menuju poli yang telah dipilih.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subFive">
+                                    <span class="text2">Pelayanan yang Tersedia</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subFive" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Meski pelayanan tiap puskesmas berbeda-beda, umumnya Puskesmas memiliki pelayanan-pelayanan berikut:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Klinik umum.</li>
+                                            <li>Pelayanan Ruang Bersalin.</li>
+                                            <li>Poli kesehatan manula.</li>
+                                            <li>Klinik Penyakit Tidak Menular.</li>
+                                            <li>Klinik manajemen terpadu balita sakit.</li>
+                                            <li>Klinik Gigi.</li>
+                                            <li>Klinik Keluarga Berencana.</li>
+                                            <li>Klinik konsultasi gizi.</li>
+                                            <li>Klinik TB (tuberkulosis) dan kusta.</li>
+                                            <li>Klinik pelayanan peduli remaja.</li>
+                                            <li>Klinik infeksi menular seksual.</li>
+                                            <li>Poli khusus surat-menyurat.</li>
+                                            <li>Pemeriksaan laboratorium.</li>
+                                            <li>Pemeriksaan EKG (elektrokardiogram).</li>
+                                            <li>Klinilk sanitasi.</li>
+                                            <li>Poli rujukan.</li>
+                                            <li>Pelayanan 24 jam.</li>
+                                        </ol>
+                                        Fasilitas, layanan, dan tenaga kesehatan di puskesmas-puskesmas Jakarta membaik dari waktu ke waktu.
+                                        Karena semakin banyak penduduk yang membutuhkan layanan kesehatan dan kesadaran penduduk meningkat terhadap pemeriksaan kesehatan.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <span class="text1">Ambulans Gawat Darurat</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseThree" class="card-body1 collapse show" aria-labelledby="headingThree">
+                    <div class="container">
+                        Seiring dengan pertambahan jumlah penduduk, peningkatan kasus gawat darurat medik juga tidak bisa dihindari.
+                        Baik untuk penyakit akut dan kronis, kecelakaan kerja, kecelakaan lalu lintas, dan sebagainya.<br><br>
+                        Setiap tahun kota Papua mempunyai kurang lebih 2000 kasus kematian yang disebabkan karena penyakit jantung dan 1000 kasus kematian karena
+                        kasus penyakit serebrovaskuler, dengan korban bencana alam dan kecelakaan lalu lintas sebanyak 500 orang setiap tahunnya,
+                        diikuti dengan penyebab lain seperti keracunan makanan, demam berdarah, huru-hara, banjir, dan sebagainya.<br><br>
+                        Mencermati keadaan ini, salah satu upaya untuk menghadapi kejadian tersebut adalah dengan menyediakan
+                        Pelayanan Ambulans Gawat Darurat dan mempersiapkan tenaga paramedis yang diharapkan mampu memberikan pertolongan pada pasien,
+                        baik di tempat kejadian dan selama proses evakuasi ke rumah sakit maupun di rumah sakit.
+                        <div class="accordion" id="accordionSubThree" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subOne">
+                                    <span class="text1">Sejarah Ambulans Gawat Darurat</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subOne" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Oleh karena itu, pada tahun 1969 pada kongres Ikatan Ahli Bedah Indonesia (IKABI) diputuskan untuk membentuk
+                                        Ambulans Gawat Darurat Pra Rumah Sakit dan pada tahun 1976,
+                                        memutuskan adanya kerjasama antara IKABI-AGD 118 dengan Dinas Kesehatan Papua.<br><br>
+                                        Tahun 1992, disepakati MOU antara Pemerintah Provinsi Papua dengan yayasan Ambulans Gawat Darurat (AGD) 118 untuk
+                                        pelayanan Ambulans Pra Rumah Sakit dengan bentuk Pinjam Pakai Asset.<br><br>
+                                        Pada tahun 2008, AGD-118 beralih menjadi UPT Dinas Kesehatan Provinsi Papua.<br><br>
+                                        Tahun 2012 AGD Dinas Kesehatan berubah menjadi BLUD Penuh berdasarkan KepGub no 383 tahun 2012.
+                                        Pada tahun 2016 dengan Pergub no 42 tahun 2016 ditetapkan Organisasi dan Tata Kerja Ambulans Gawat Darurat Dinas Kesehatan.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subTwo">
+                                    <span class="text1">Fungsi dan Tugas AGD Dinas Kesehatan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subTwo" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Fungsi dan tugas dari AGD Dinas Kesehatan Provinsi DKI Jakarta antara lain :
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Melakukan evakuasi medis pra rumah sakit, maupun antar rumah sakit.</li>
+                                            <li>Pelayanan Ambulans Siaga 24 Jam, termasuk dukungan dan bantuan kesehatan di daerah bencana dan standby di kegiatan tertentu.</li>
+                                            <li>Pengkajian dan Pengembangan Pelayanan Ambulans Gawat Darurat.</li>
+                                            <li>Menyiapkan SDM untuk pelayanan Gawat Darurat dalam bentuk diklat kegawatdaruratan untuk masyarakat.</li>
+                                            <li>Membangun Sistem Penanggulangan Gawat Darurat Terpadu, dalam menangani masalah
+                                                kesehatan dan kebutuhan masyarakat akan pelayanan kegawatdaruratan.</li>
+                                            <li>Memberikan rekomendasi standarisasi ambulans yang beroperasional di wilayah DKI Jakarta, yang tergabung dalam Ambulans Kota.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subThree">
+                                    <span class="text1">Biaya AGD Dinas Kesehatan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subThree" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Saat ini, pelayanan Ambulans Gawat Darurat Dinas Kesehatan Papua adalah GRATIS bagi semua warga dengan KTP/KK Papua.
+                                        AGD Dinkes tersebar di 10 pos di lima wilayah Papua, baik di Puskesmas, RS, Pemadam Kebakaran, Kantor Instansi Pemerintah,
+                                        dan Pos Polisi. Pusat Komando dan Pusat Logistik Ambulans juga melakukan kegiatan operasional 24 jam.<br><br>
+                                        Jumlah armada pada tahun 2016 yang dimiliki oleh Dinas Kesehatan Papua saat ini terdiri
+                                        atas 7 unit mobil ambulans dan 3 ambulans motor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subFour">
+                                    <span class="text1">Para Pahlawan di AGD Dinas Kesehatan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subFour" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Unit Reaksi Cepat adalah perawat yang sudah terlatih untuk mengendarai sepeda motor
+                                        dan membawa perlengkapan life-saving untuk mengatasi kemacetan di jalan raya yang dapat berdampak pada keterlambatan
+                                        tibanya ambulans roda empat.<br>
+                                        Sebagian besar karyawan AGD Dinkes adalah karyawan Non-PNS dengan masa kerja antara 1-23 tahun.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small indigo">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-2 mx-auto">
+                    <a href="/"><img src="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}" width="120px" style="padding-top: 20px;" class="d-none d-md-block"></a>
+                </div>
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Terbaru</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                            <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                            <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Populer</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                          <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                          <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                          <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-4 mx-auto margin d-none d-md-block">
+                    <ul class="list-unstyled row">
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Facebook" src="{{ url_for('static', filename='resources/images/icon/facebook.png')}}" alt="Facebook" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Youtube" src="{{ url_for('static', filename='resources/images/icon/play button.png')}}" alt="Youtube" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Twitter" src="{{ url_for('static', filename='resources/images/icon/twitter.png')}}" alt="Twitter" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Instagram" src="{{ url_for('static', filename='resources/images/icon/instagram.png')}}" alt="Instagram" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link"><img title="Email" src="{{ url_for('static', filename='resources/images/icon/gmail.png')}}" alt="Email" class="footer-media"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mx-auto margin d-md-none">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="footer-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Instargam</a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link">Email</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2022 Copyright :
+            <a href="/" style="color: black;"> Pemerintah Daerah Provinsi Papua. All Rights Reserved</a>
+        </div>
+    </footer>
+
+    <button class="open-button animate__animated animate__fadeIn" onclick="openForm()">
+        <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+    </button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <button type="button" class="open-button line animate__animated animate__fadeInUp">
+                <a href="#"><img title="Line" src="{{ url_for('static', filename='resources/images/icon/line.png')}}" alt="Line" class="img"></a>
+            </button>
+            <button type="button" class="open-button messenger animate__animated animate__fadeInUp">
+                <a href="#"><img title="Messenger" src="{{ url_for('static', filename='resources/images/icon/facebook messenger.png')}}" alt="Messenger" class="img"></a>
+            </button>
+            <button type="button" class="open-button whatsapp animate__animated animate__fadeInUp">
+                <a href="#"><img title="Whatsapp" src="{{ url_for('static', filename='resources/images/icon/whatsapp.png')}}" alt="Whatsapp" class="img"></a>
+            </button>
+            <button type="button" class="open-button animate__animated animate__fadeIn" onclick="closeForm()">
+                <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+</script>

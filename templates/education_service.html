@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}">
+    <title>Portal Papuaprov - Satu Portal untuk semua Hal Tentang Papua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/media.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a91a27e46f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="topbar fixed-top animate__animated animate__fadeInDown">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a title="TFU" href="/"><img src="{{ url_for('static', filename='resources/images/logo/PAPUAPROVGOID.png')}}" alt="there for you home page" id="tfu"></a>
+                </div>
+                <button class="navbar-toggler animate__animated animate__fadeInRight" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <hr class="clearfix w-100 d-md-none margin animate__animated animate__fadeIn">
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                              <a class="nav-link dropdown-toggle">
+                                    <p class="navbar-link">About</p>
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/history">Sejarah</a>
+                                <a class="dropdown-item" href="/resources">Sumber Daya Alam</a>
+                                <a class="dropdown-item" href="/demography">Demografi</a>
+                              </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Map</p>
+                                </a>
+                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/maps">Peta Daerah</a>
+                                  <a class="dropdown-item" href="/culinary_tourism">Wisata Kuliner</a>
+                                  <a class="dropdown-item" href="/historical_tourism">Wisata Sejarah</a>
+                                  <a class="dropdown-item" href="/natural_tourism">Wisata Alam</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle" href="/government">
+                                      <p class="navbar-link">Government</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/government#Gubernur&WakilGubernur">Gubernur dan Wakil Gubernur</a>
+                                  <a class="dropdown-item" href="/government#Visi&Misi">Visi dan Misi</a>
+                                  <a class="dropdown-item" href="/government#StrukturOrganisasi">Struktur Organisasi</a>
+                                  <a class="dropdown-item" href="/government#AlamatKantor">Alamat Kantor</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Services & Information</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/population_service">Layanan Kependudukan</a>
+                                  <a class="dropdown-item" href="/healthcare_service">Layanan Kesehatan</a>
+                                  <a class="dropdown-item" href="/education_service">Layanan Pendidikan</a>
+                                </div>
+                            </li>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">About</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/history"><p class="navbar-link">Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/resources"><p class="navbar-link">Sumber Daya Alam</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/demography"><p class="navbar-link">Demografi</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Map</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/maps"><p class="navbar-link">Peta Daerah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/culinary_tourism"><p class="navbar-link">Wisata Kuliner</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/historical_tourism"><p class="navbar-link">Wisata Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/natural_tourism"><p class="navbar-link">Wisata Alam</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Government</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Gubernur&WakilGubernur"><p class="navbar-link">Gubernur dan Wakil Gubernur</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Visi&Misi"><p class="navbar-link">Visi dan Misi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#StrukturOrganisasi"><p class="navbar-link">Struktur Organisasi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#AlamatKantor"><p class="navbar-link">Alamat Kantor</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none">
+                                <h2 class="title-navbar">Services & Information</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/population_service"><p class="navbar-link">Layanan Kependudukan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/healthcare_service"><p class="navbar-link">Layanan Kesehatan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/education_service"><p class="navbar-link">Layanan Pendidikan</p></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div style="padding-top: 80px;">
+        <div class="fluit-container">
+            <div class="margin">
+                <div class="center grid" style="background-image: url({{ url_for('static', filename='resources/images/service/pendidikan.png')}});">
+                    <h1 class="title2 text-center responsive-title" style="color: white;" data-aos="fade-down" data-aos-duration="800">Layanan Pendidikan</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fluit-container">
+        <div class="accordion" id="accordionMain" data-aos="fade">
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="text1">Fasilitas Pendidikan</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseOne" class="card-body1 collapse show" aria-labelledby="headingOne">
+                    <div class="container">
+                        Pendidikan ialah upaya untuk membantu peserta didik agar mereka mampu mengerjakan tugas kehidupan secara mandiri
+                        dan bertanggung jawab secara oral dan susila. Sehinga dinas pendidikan provinsi Papua membangun fasilitas sekolah untuk memajukan pendidikan
+                        generasi anak muda di Papua.
+                        <div class="accordion" id="accordionSubOne" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subOne">
+                                    <span class="text1">Sekolah Dasar</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subOne" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        <b>Sekolah Dasar (SD)</b> merupakan jenjang pendidikan dasar yang memberikan program pendidikan sebagai tahapan
+                                        awal untuk mempersiapkan pelajar menjadi warga negara yang baik.
+                                        Pendidikan SD juga memberikan bekal ilmu agar para siswa dapat melanjutkan pelajarannya ke lembaga pendidikan yang lebih tinggi,
+                                        seperti Sekolah Menengah Pertama (SMP)/sederajat dan Sekolah Menengah Atas (SMA)/sederajat.
+                                        Dengan kata lain, SD adalah jenjang pendidikan yang melandasi jenjang pendidikan menengah.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subTwo">
+                                    <span class="text1">Sekolah Menengah Pertama</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subTwo" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        <b>Sekolah Menengah Pertama (SMP)</b> adalah lanjutan jenjang pendidikan formal setelah Sekolah Dasar (SD).
+                                        Durasi jenjang pendidikan ini berlangsung selama tiga tahun.
+                                        Di tingkat SMP, siswa dan siswi akan mendapatkan pendidikan dan pembelajaran yang memberikan pondasi bagi generasi yang
+                                        berkualitas di masa depan.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subThree">
+                                    <span class="text1">Sekolah Menengah Atas</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subThree" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        <b>Sekolah Menengah Atas (SMA) atau Sekolah Menengah Kejuruan (SMK)</b> merupakan jenjang pendidikan menengah
+                                        yang menjadi lanjutan Sekolah Menengah Pertama (SMP) atau sederajat.
+                                        Seperti SMP, pendidikan SMA dan SMK juga diselesaikan dalam kurun waktu tiga tahun, dimulai dari kelas 10 sampai kelas 12.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <span class="text2">Pembelajaran Jarak Jauh (PJJ)</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                </div>
+                <div id="collapseTwo" class="card-body2 collapse show" aria-labelledby="headingTwo">
+                    <div class="container">
+                        Pembelajaran Jarak Jauh atau PJJ merupakan metode pembelajaran baru bagi siswa/i di Papua selama pandemi Covid-19.
+                        Berdasarkan Keputusan Kepala Dinas Pendidikan Nomor 467 Tahun 2020 tentang Kalender Pendidikan Tahun Pelajaran 2020/2021
+                        dan Kesiapan Dimulainya Kegiatan Belajar dan Mengajar.
+                        Selama pandemi, kegiatan belajar dan mengajar dilakukan melalui metode PJJ sesuai dengan Surat Keputusan Bersama (SKB) 4 Menteri
+                        dan Keputusan Tim Gugus Tugas Percepatan Penanganan Covid-19.
+                        <div class="accordion" id="accordionSubTwo" style="padding-top: 20px;">
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subOne">
+                                    <span class="text2">Panduan Pembelajaran Jarak Jauh</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subOne" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Dalam modul ini, guru akan mendapatkan arahan terkait cara pembelajaran 5M sebagai Standar Operasional Prosedur (SOP)
+                                        pembelajaran selama masa pandemi, di mana guru dan orang tua diharapkan dapat menciptakan pengalaman belajar yang melibatkan anak.
+                                        Panduan PJJ ini memiliki dua tujuan utama.
+                                        Pertama, mendorong kolaborasi orang tua, guru, dan murid untuk berdaya belajar dalam menghadapi situasi darurat akibat wabah virus Korona.
+                                        Kedua, memastikan anak mendapatkan personalisasi pengalaman belajar yang bermakna, menantang, dan sesuai dengan
+                                        kemampuan serta kebutuhan anak. Cara pembelajaran 5M sebagai berikut:
+                                        <ol style="margin-left: -25px;"><br>
+                                            <li><b>Memanusiakan Hubungan</b><br>
+                                                Ini merupakan praktik pembelajaran yang dilandasi orientasi kepada anak berdasarkan relasi positif yang saling memahami
+                                                antara guru, murid, dan orang tua. Beberapa anjuran yang diajukan antara lain:
+                                                <ul style="margin-left: -25px;">
+                                                    <li>Melakukan pengumpulan informasi terhadap kesiapan orang tua.</li>
+                                                    <li>Menyediakan waktu untuk berdiskusi bersama orang tua dan murid.</li>
+                                                    <li>Memperkirakan durasi pengerjaan tugas yang akan diberikan.</li>
+                                                    <li>Membangun kesepakatan dengan orang tua terkait cara pengerjaan tugas murid, jadwal, dan konferensi guru.</li>
+                                                    <li>Menyiapkan aktivitas dan tugas belajar.</li>
+                                                    <li>Guru diharapkan menghindari tiga hal, yaitu memberi tugas yang tidak memahami kondisi murid dan orang tua,
+                                                        memaksa agar tugas dikerjakan dengan kriteria dan durasi kecepatan yang sama dengan semua murid,
+                                                        serta menuntut orang tua untuk mendampingi murid secara penuh.</li>
+                                                </ul>
+                                            </li><br>
+                                            <li><b>Memahami Konsep</b><br>
+                                                Praktik pembelajaran yang memandu murid bukan sekadar menguasai konten,
+                                                tetapi juga memahami secara mendalam konsep yang dapat diterapkan di beragam konteks.
+                                                Beberapa anjuran yang diajukan antara lain:
+                                                <ul style="margin-left: -25px;">
+                                                    <li>Memberi penjelasan terlebih dahulu kepada orang tua.</li>
+                                                    <li>Memberi tugas terkait lingkungan di rumah dengan persoalan yang sedang hangat dibicarakan.</li>
+                                                    <li>Menyediakan pertanyaan secara terbuka agar murid dapat mengekspresikan pendapatnya.</li>
+                                                    <li>Guru diharapkan menghindari dua hal, yaitu memberi tugas tanpa disertai diskusi dan refleksi,
+                                                        serta memberi tugas yang konteksnya hanya memindahkan materi dari buku teks ke lembar tugas.</li>
+                                                </ul>
+                                            </li><br>
+                                            <li><b>Membangun Keberlanjutan</b><br>
+                                                Praktik pembelajaran yang memandu murid mengalami rute pengalaman belajar yang terarah dan berkelanjutan,
+                                                melalui umpan balik serta berbagi praktik baik. Beberapa anjuran yang diajukan antara lain:
+                                                <ul style="margin-left: -25px;">
+                                                    <li>Membuat panduan tugas yang rinci, namun tidak mendikte.</li>
+                                                    <li>Memastikan memberi umpan balik dalam setiap penugasan kepada murid.</li>
+                                                    <li>Memperbanyak asesmen formatif. Pada kelas kecil berupa pertanyaan yang dapat dijawab dengan gambar atau ekspresi murid.
+                                                        Selain itu pada kelas besar, asesmen formatif berupa pilihan ganda atau soal singkat yang hasilnya bisa langsung diketahui.</li>
+                                                    <li>Memastikan kriteria keberhasilan.</li>
+                                                    <li>Melakukan refleksi secara berkala.</li>
+                                                </ul>
+                                            </li><br>
+                                            <li><b>Memilih Tantangan</b><br>
+                                                Praktik pembelajaran yang memandu murid menguasai keahlian melalui proses yang berjenjang dengan pilihan tantangan yang bermakna.
+                                                Beberapa anjuran yang diajukan antara lain:
+                                                <ul style="margin-left: -25px;">
+                                                    <li>Menyediakan pilihan jam belajar.</li>
+                                                    <li>Mengkombinasikan diskusi dengan aktivitas bergerak di rumah.</li>
+                                                    <li>Menyediakan pilihan tugas.</li>
+                                                    <li>Guru diharapkan menghindari dua hal, yaitu memberi tugas yang terlalu mudah atau terlalu sulit,
+                                                        serta memberi tugas sesuai kurikulum namun tidak mengaitkan dengan lingkungan atau kehidupan sekitar.</li>
+                                                </ul>
+                                            </li><br>
+                                            <li><b>Memberdayakan Konteks</b><br>
+                                                Praktik pembelajaran yang memandu murid melibatkan sumber daya dan kesempatan di komunitas,
+                                                sebagai sumber belajar sekaligus kesempatan berkontribusi terhadap perubahan.
+                                                Beberapa anjuran yang diajukan antara lain:
+                                                <ul style="margin-left: -25px;">
+                                                    <li>Memberi tugas yang dapat menerapkan kemampuan murid pada konteks atau tugas sehari-hari di rumah.</li>
+                                                    <li>Memberi tugas yang membuat murid dan orang tua merasa berkontribusi terhadap persoalan yang sedang hangat dibicarakan.</li>
+                                                    <li>Guru diharapkan menghindari tiga hal, yaitu memberi tugas yang dapat mendorong murid untuk
+                                                        berinteraksi dengan banyak orang, memberi tugas dari satu sumber atau buku teks semata,
+                                                        serta memberi tugas yang sama untuk semua murid tanpa mempertimbangkan kebutuhan dan kondisi murid lainnya.</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subTwo">
+                                    <span class="text2">Panduan Masa Pengenalan Lingkungan Sekolah (MPLS) dan Masa Ta'aruf Siswa Madrasah (MATSAMA)</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subTwo" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        <b>MPLS</b> merupakan kegiatan pengenalan mengenai proses belajar di sekolah,
+                                        yang bertujuan untuk menyesuaikan dengan kondisi kegiatan belajar mengajar selama pandemi Covid-19, yakni:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Mengenali potensi siswa baru.</li>
+                                            <li>Membantu siswa untuk beradaptasi dengan lingkungan sekolah dan sekitarnya,
+                                                antara lain dengan aspek keamanan, fasilitas umum, sarana dan prasarana sekolah.</li>
+                                            <li>Menumbuhkan motivasi, semangat, dan cara belajar efektif sebagai siswa baru.</li>
+                                            <li>Mengembangkan interaksi positif antar siswa dan warga sekolah lainnya.</li>
+                                            <li>Menumbuhkan perilaku positif antara lain kejujuran, kemandirian, sikap saling menghargai,
+                                                menghormati keanekaragaman dan persatuan, kedisiplinan, hidup bersih dan sehat untuk mewujudkan siswa yang memiliki integritas,
+                                                etos kerja, serta semangat gotong royong.</li>
+                                        </ol>
+                                        <b>MATSAMA</b> merupakan kegiatan pengenalan mengenai proses belajar di madrasah,
+                                        yang juga bertujuan untuk menyesuaikan dengan kondisi kegiatan belajar mengajar selama pandemi Covid-19, yakni:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Mengenalkan lingkungan, nilai, dan karakter khusus madrasah kepada para peserta didik baru,
+                                                agar selama proses pembelajaran dapat tercipta rasa aman serta nyaman,
+                                                untuk mengembangkan seluruh potensi diri dan kemampuannya.</li>
+                                            <li>Menumbuhkan kultur dan jiwa bangga kepada para peserta didik baru, untuk belajar serta mencintai dan menjaga nama baik almamaternya.</li>
+                                            <li>Menanamkan dan memperkuat nilai-nilai moderasi beragama serta karakter ke-Indonesia-an kepada para peserta didik.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subThree">
+                                    <span class="text2">Panduan Pembelajaran Gabungan (Blended Learning)</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subThree" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Panduan ini dibuat bertujuan untuk menciptakan kegiatan belajar mengajar yang berorientasi pada
+                                        kepentingan peserta didik dan memastikan pendidik memberikan pengalaman belajar yang bermakna, menantang,
+                                        serta sesuai dengan kemampuan peserta didik.<br><br>
+                                        Langkah-langkah pelaksanaan <i>Blended Learning</i>:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Mempertimbangkan kesenjangan akses atau fasilitas belajar yang dimiliki oleh peserta didik.</li>
+                                            <li>Mengatur jadwal dan bentuk kegiatan <i>blended learning</i>.</li>
+                                            <li>Merancang kegiatan belajar yang lebih variatif, inovatif, serta kreatif, untuk menghindari kejenuhan.</li>
+                                            <li>Memberikan bimbingan dan umpan balik yang bersifat kualitatif.</li>
+                                            <li>Membuka jalur komunikasi dua arah dengan orang tua peserta didik.</li>
+                                            <li>Menyediakan tugas yang membuat murid dan orang tua merasa berkontribusi terhadap persoalan yang sedang hangat dibicarakan.</li>
+                                            <li>Mengoptimalkan jadwal dan kegiatan pembelajaran Agama, Seni Budaya, Pendidikan Jasmani Olahraga dan Kesehatan, serta Bimbingan Konseling.</li>
+                                            <li>Memastikan pembelajaran difokuskan pada pendidikan kecakapan hidup dan disesuaikan dengan minat peserta didik.</li>
+                                        </ol>
+                                        Adapun beberapa hal yang perlu dihindari dalam <i>blended learning</i> sebagai berikut:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Memberikan tugas sekadar untuk latihan soal atau pengerjaan Lembar Kerja Siswa (LKS), tanpa disertai diskusi dan refleksi.</li>
+                                            <li>Memberi tugas yang mendorong peserta didik untuk berinteraksi dengan orang banyak di luar rumah.</li>
+                                            <li>Memberi tugas hanya dari satu sumber atau buku teks semata.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <span class="text1">PPDB Online</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseThree" class="card-body1 collapse show" aria-labelledby="headingThree">
+                    <div class="container">
+                        Pemerintah Provinsi Papua berperan aktif mengupayakan pemerataan pendidikan di Ibu Kota.
+                        Melalui Dinas Pendidikan, Provinsi Papua menyediakan beberapa alternatif jalur seleksi
+                        Penerimaan Peserta Didik Baru (PPDB) Online untuk jenjang SD, SMP, SMA, dan SMK.
+                        <div class="accordion" id="accordionSubThree" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subOne">
+                                    <span class="text1">Ketentuan Umum PPDB Online:</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subOne" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Warga Provinsi Papua, ditunjukkan dengan Kartu Keluarga yang dikeluarkan Dinas Kependudukan dan
+                                                Catatan Sipil Provinsi Papua serta tercatat dalam sistem data kependudukan paling akhir 2 Januari 2019.</li>
+                                            <li>Calon Peserta Didik Baru menyerahkan berkas persyaratan PPDB sesuai dengan ketentuan kepada panitia tingkat Satuan Pendidikan.</li>
+                                            <li>Menyerahkan surat keterangan yang menerangkan bahwa Calon Peserta Didik Baru adalah peserta didik inklusi dari pihak yang berkompeten.</li>
+                                            <li>Calon Peserta Didik Baru hanya bisa memilih satu sekolah tujuan.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subTwo">
+                                    <span class="text1">JALUR PPDB ONLINE SD</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subTwo" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Inklusi.</li>
+                                            <li>Anak Panti dan Pemegang Kartu Pekerja.</li>
+                                            <li>Zonasi.</li>
+                                            <li>Afirmasi Zonasi.</li>
+                                            <li>Non-Zonasi.</li>
+                                            <li>Afirmasi Non-Zonasi.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subThree">
+                                    <span class="text1">JALUR PPDB ONLINE SMP</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subThree" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Inklusi.</li>
+                                            <li>Anak Panti dan Pemegang Kartu Pekerja.</li>
+                                            <li>Zonasi.</li>
+                                            <li>Afirmasi Zonasi.</li>
+                                            <li>Non-Zonasi.</li>
+                                            <li>Afirmasi Non-Zonasi.</li>
+                                            <li>Prestasi.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subFour">
+                                    <span class="text1">JALUR PPDB ONLINE SMA</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subFour" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Inklusi.</li>
+                                            <li>Anak Panti dan Pemegang Kartu Pekerja.</li>
+                                            <li>Zonasi.</li>
+                                            <li>Afirmasi Zonasi.</li>
+                                            <li>Non-Zonasi.</li>
+                                            <li>Afirmasi Non-Zonasi.</li>
+                                            <li>Prestasi.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subFive">
+                                    <span class="text1">JALUR PPDB ONLINE SMK</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subFive" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Inklusi.</li>
+                                            <li>Anak Panti dan Pemegang Kartu Pekerja.</li>
+                                            <li>Non-Zonasi.</li>
+                                            <li>Afirmasi Non-Zonasi.</li>
+                                            <li>Prestasi.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <span class="text2">Pepustakaan Nasional</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                </div>
+                <div id="collapseFour" class="card-body2 collapse show" aria-labelledby="headingFour">
+                    <div class="container">
+                        Perpustakaan Nasional Republik Indonesia (Perpusnas) merupakan perpustakaan milik pemerintah Republik Indonesia.
+                        Perpustakaan Nasional berlokasi di Jalan Tugu Jepang, Amban, Manokwari Barat, Kabupaten Manokwari, Papua Barat.<br><br>
+
+                        Berdasarkan sejarahnya, Perpusnas bermula dari didirikannya Bataviaasch Genootschap yang menjadi pelopor Perpusnas pada 24 April 1778.
+                        Bataviaasch Genoothscap dibubarkan pada tahun 1950.<br><br>
+
+                        Perpusnas sebagai perpustakaan yang berskala nasional ini merupakan lembaga nonkementerian yang tidak hanya melayani anggota
+                        suatu perkumpulan ilmu pengetahuan tertentu, tetapi juga melayani anggota masyarakat dari semua lapisan dan golongan.
+                        Koleksi Perpusnas terbuka untuk umum, namun tidak dipinjamkan untuk dibawa pulang.
+                        Layanan Perpusnas berupaya untuk berfokus pada pengembangan ilmu pengetahuan dan memenuhi kebutuhan bahan pustaka untuk mencerdaskan kehidupan bangsa.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small indigo">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-2 mx-auto">
+                    <a href="/"><img src="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}" width="120px" style="padding-top: 20px;" class="d-none d-md-block"></a>
+                </div>
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Terbaru</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                            <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                            <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Populer</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                          <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                          <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                          <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-4 mx-auto margin d-none d-md-block">
+                    <ul class="list-unstyled row">
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Facebook" src="{{ url_for('static', filename='resources/images/icon/facebook.png')}}" alt="Facebook" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Youtube" src="{{ url_for('static', filename='resources/images/icon/play button.png')}}" alt="Youtube" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Twitter" src="{{ url_for('static', filename='resources/images/icon/twitter.png')}}" alt="Twitter" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Instagram" src="{{ url_for('static', filename='resources/images/icon/instagram.png')}}" alt="Instagram" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link"><img title="Email" src="{{ url_for('static', filename='resources/images/icon/gmail.png')}}" alt="Email" class="footer-media"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mx-auto margin d-md-none">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="footer-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Instargam</a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link">Email</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2022 Copyright :
+            <a href="/" style="color: black;"> Pemerintah Daerah Provinsi Papua. All Rights Reserved</a>
+        </div>
+    </footer>
+
+    <button class="open-button animate__animated animate__fadeIn" onclick="openForm()">
+        <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+    </button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <button type="button" class="open-button line animate__animated animate__fadeInUp">
+                <a href="#"><img title="Line" src="{{ url_for('static', filename='resources/images/icon/line.png')}}" alt="Line" class="img"></a>
+            </button>
+            <button type="button" class="open-button messenger animate__animated animate__fadeInUp">
+                <a href="#"><img title="Messenger" src="{{ url_for('static', filename='resources/images/icon/facebook messenger.png')}}" alt="Messenger" class="img"></a>
+            </button>
+            <button type="button" class="open-button whatsapp animate__animated animate__fadeInUp">
+                <a href="#"><img title="Whatsapp" src="{{ url_for('static', filename='resources/images/icon/whatsapp.png')}}" alt="Whatsapp" class="img"></a>
+            </button>
+            <button type="button" class="open-button animate__animated animate__fadeIn" onclick="closeForm()">
+                <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+</script>

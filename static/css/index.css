@@ -1,0 +1,464 @@
+/* Navbar */
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end{ right:0; left: auto;  }
+    .navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;}
+    .navbar .nav-item:hover .nav-link{ color: #03265B;  }
+    .navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+    .navbar .dropdown-menu.fade-up{ top:180%;  }
+    .navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+}
+
+@font-face {
+    font-family: Inter;
+    src: url({{ url_for('resources', filename='font/Inter-Regular.ttf')}});
+}
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+
+    .responsive-title {
+        font-size: 30px;
+    }
+
+    .responsive-text {
+        font-size: 20px;
+    }
+}
+
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+
+    .responsive-title {
+        font-size: 20px;
+    }
+
+    .responsive-text {
+        font-size: 10px;
+    }
+}
+
+.grid {
+    padding: 102px 100px;
+    background-position: center;
+}
+
+body{
+    font-family: Inter;
+    height: auto;
+    background-color: #ffd657;
+}
+
+#tfu{
+    width: 250px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+.dropdown-toggle:after {
+    display: none;
+}
+
+.navbar{
+    background-color: #2957A4;
+    border-bottom: 5px solid #eceefa;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 5px;
+    opacity: 1;
+}
+
+.navbar .nav-item .nav-link {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    padding-right: 20px;
+}
+
+.dropdown-menu a {
+    color: black;
+    font-weight: bold;
+    font-size: small;
+}
+
+.navbar .dropdown-menu {
+    background-color: #FFD657;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.navbar .dropdown-menu:hover {
+    background-color: #FFD657;
+}
+
+.title-navbar {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.navbar-broder {
+    border-bottom: 1px solid white;
+}
+
+#active {
+    color: white;
+}
+
+.navbar-link:hover {
+    color: #FFD657;
+}
+
+.navbar-icon {
+    margin-right: 10px;
+}
+
+/* and this styles the dropdwon trigger link, when open */
+.navbar .dropdown.show a {
+    background-color: #ffd557d0;
+}
+
+.main {
+    width: 100%;
+}
+
+/* isi layout */
+
+.layout1 {
+    background-color: #2957A4;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.layout2 {
+    background-color: #FFD657;
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.layout3 {
+    background-color: #eceefa;
+    color: black;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+
+
+.link1{
+    color: black;
+    text-decoration: none;
+}
+
+.link1:hover{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link2{
+    color: white;
+    text-decoration: none;
+}
+
+.link2:hover{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-margin{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.list
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.layer {
+    padding-top: 20px;
+}
+
+.margin {
+    margin: auto;
+}
+
+.center {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.title{
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.title2{
+    font-weight: bold;
+    text-align: left;
+}
+
+.news-date{
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
+
+.news-date-title{
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.news-date-text{
+    font-size: larger;
+    color: red;
+    font-weight: bold;
+}
+
+.news-title{
+    font-size: large;
+    font-weight: bold;
+}
+
+.text {
+    font-size: medium;
+}
+
+.caption{
+    font-size: small;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Bootstrap 4 text input with search icon */
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.img-marker {
+    width: 40px;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: medium;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4cbfa8;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+}
+
+.button:hover {
+    color: #dadce9;
+}
+
+.button:active {
+  background-color: #4cbfa8;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.button-danger {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: medium;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #2957A4;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+}
+
+.button-danger:hover {
+    color: #dadce9;
+}
+
+.button-danger:active {
+  background-color: #2957A4;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+/* Footer */
+footer {
+    background-color: #ffd657;
+    color: black;
+    border-top: #eceefa solid 5px;
+    padding-top:15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-decoration: none;
+}
+
+.footer-title {
+    font-size: medium;
+}
+
+.footer-link {
+    color:black;
+}
+
+.footer-link:hover {
+    color: #2957A4;
+    text-decoration: none;
+}
+
+.footer-media {
+    width: 35px;
+    margin: 5px;
+    opacity: 0.8;
+}
+
+.footer-media:hover {
+    opacity: 1;
+}
+
+/*Popup*/
+.open-button {
+    background-color: #2957A4;
+    padding: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    border-radius: 35px;
+    width: 57px;
+}
+
+.form-container .whatsapp{
+    width: 52px;
+    bottom: 90px;
+    right: 30px;
+}
+
+.form-container .messenger{
+    width: 52px;
+    bottom: 150px;
+    right: 30px;
+}
+
+.form-container .line{
+    width: 52px;
+    bottom: 210px;
+    right: 30px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+    background-color: #2957A4;
+}
+
+/* Card Accordion*/
+.card-header .accicon {
+    float: right;
+    font-size: 20px;
+    width: 1.2em;
+}
+
+.card-header{
+    cursor: pointer;
+    border-bottom: none;
+}
+
+.card-header:not(.collapsed) .rotate-icon {
+    transform: rotate(180deg);
+}
+
+/*Card Layer1*/
+.card-header .text1 {
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+
+.card1{
+    background-color: #2957A4;
+}
+
+.card-broder1{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-body1{
+    border-top: 1px solid white;
+    color: white;
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Card Layer2*/
+.card-header .text2 {
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+}
+
+.card2{
+    background-color: #FFD657;
+}
+
+.card-broder2{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-body2{
+    border-top: 1px solid black;
+    color: black;
+    text-align: justify;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

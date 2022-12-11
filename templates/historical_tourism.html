@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}">
+    <title>Portal Papuaprov - Satu Portal untuk semua Hal Tentang Papua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/media.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="topbar fixed-top animate__animated animate__fadeInDown">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a title="TFU" href="/"><img src="{{ url_for('static', filename='resources/images/logo/PAPUAPROVGOID.png')}}" alt="there for you home page" id="tfu"></a>
+                </div>
+                <button class="navbar-toggler animate__animated animate__fadeInRight" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <hr class="clearfix w-100 d-md-none margin animate__animated animate__fadeIn">
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                              <a class="nav-link dropdown-toggle">
+                                    <p class="navbar-link">About</p>
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/history">Sejarah</a>
+                                <a class="dropdown-item" href="/resources">Sumber Daya Alam</a>
+                                <a class="dropdown-item" href="/demography">Demografi</a>
+                              </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Map</p>
+                                </a>
+                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/maps">Peta Daerah</a>
+                                  <a class="dropdown-item" href="/culinary_tourism">Wisata Kuliner</a>
+                                  <a class="dropdown-item" href="/historical_tourism">Wisata Sejarah</a>
+                                  <a class="dropdown-item" href="/natural_tourism">Wisata Alam</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle" href="/government">
+                                      <p class="navbar-link">Government</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/government#Gubernur&WakilGubernur">Gubernur dan Wakil Gubernur</a>
+                                  <a class="dropdown-item" href="/government#Visi&Misi">Visi dan Misi</a>
+                                  <a class="dropdown-item" href="/government#StrukturOrganisasi">Struktur Organisasi</a>
+                                  <a class="dropdown-item" href="/government#AlamatKantor">Alamat Kantor</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Services & Information</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/population_service">Layanan Kependudukan</a>
+                                  <a class="dropdown-item" href="/healthcare_service">Layanan Kesehatan</a>
+                                  <a class="dropdown-item" href="/education_service">Layanan Pendidikan</a>
+                                </div>
+                            </li>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">About</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/history"><p class="navbar-link">Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/resources"><p class="navbar-link">Sumber Daya Alam</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/demography"><p class="navbar-link">Demografi</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Map</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/maps"><p class="navbar-link">Peta Daerah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/culinary_tourism"><p class="navbar-link">Wisata Kuliner</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/historical_tourism"><p class="navbar-link">Wisata Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/natural_tourism"><p class="navbar-link">Wisata Alam</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Government</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Gubernur&WakilGubernur"><p class="navbar-link">Gubernur dan Wakil Gubernur</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Visi&Misi"><p class="navbar-link">Visi dan Misi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#StrukturOrganisasi"><p class="navbar-link">Struktur Organisasi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#AlamatKantor"><p class="navbar-link">Alamat Kantor</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none">
+                                <h2 class="title-navbar">Services & Information</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/population_service"><p class="navbar-link">Layanan Kependudukan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/healthcare_service"><p class="navbar-link">Layanan Kesehatan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/education_service"><p class="navbar-link">Layanan Pendidikan</p></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="layout3">
+        <div class="container layer">
+            <h1 class="news-date-title" data-aos="fade-down" data-aos-offset="200" data-aos-duration="800">Wisata Sejarah Papua</h1>
+            <div class="margin" data-aos="fade-down" data-aos-duration="800">
+                <div class="center grid" style="background-image: url({{ url_for('static', filename='resources/images/homepage/Tugu_Pepera.png')}});">
+                    <h1 class="title2 text-center responsive-title">Tugu Pepera</h1>
+                    <h2 class="text-center responsive-text" style="margin-top: 0px;">
+                        <a href="https://goo.gl/maps/geWQcpuwBPJMTFpG8" class="link1">JL.FP74+R8H, Bayangkara, Kec. Jayapura Utara, Kota Jayapura, Papua 99112</a>
+                    </h2>
+                </div>
+            </div><br>
+            <div class="margin" data-aos="fade-down" data-aos-duration="800">
+                <div class="center grid" style="background-image: url({{ url_for('static', filename='resources/images/homepage/Pulau_Mansiman.png')}});">
+                    <h1 class="title2 text-center responsive-title">Pulau Manisman</h1>
+                    <h2 class="text-center responsive-text" style="margin-top: 0px;">
+                        <a href="https://goo.gl/maps/sV3R5HrJGch2zNoM9" class="link1">JL.Mansinam, Kec. Manokwari Tim., Kabupaten Manokwari, Papua Bar</a>
+                    </h2>
+                </div>
+            </div><br>
+            <div class="margin" data-aos="fade-down" data-aos-duration="800">
+                <div class="center grid" style="background-image: url({{ url_for('static', filename='resources/images/homepage/Kamp_Konsentrasi.png')}});">
+                    <h1 class="title2 text-center responsive-title">Kamp Konsentrasi Boven Digoel</h1>
+                    <h2 class="text-center responsive-text" style="margin-top: 0px;">
+                        <a href="https://goo.gl/maps/c7TGXJiV8umTzLYf8" class="link1">JL.785X+XCX, Ujung, Arimop, Kabupaten Boven Digoel, Papua 99663</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small indigo">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-2 mx-auto">
+                    <a href="/"><img src="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}" width="120px" style="padding-top: 20px;" class="d-none d-md-block"></a>
+                </div>
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Terbaru</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                            <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                            <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Populer</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                          <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                          <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                          <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-4 mx-auto margin d-none d-md-block">
+                    <ul class="list-unstyled row">
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Facebook" src="{{ url_for('static', filename='resources/images/icon/facebook.png')}}" alt="Facebook" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Youtube" src="{{ url_for('static', filename='resources/images/icon/play button.png')}}" alt="Youtube" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Twitter" src="{{ url_for('static', filename='resources/images/icon/twitter.png')}}" alt="Twitter" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Instagram" src="{{ url_for('static', filename='resources/images/icon/instagram.png')}}" alt="Instagram" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link"><img title="Email" src="{{ url_for('static', filename='resources/images/icon/gmail.png')}}" alt="Email" class="footer-media"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mx-auto margin d-md-none">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="footer-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Instargam</a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link">Email</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2022 Copyright :
+            <a href="/" style="color: black;"> Pemerintah Daerah Provinsi Papua. All Rights Reserved</a>
+        </div>
+    </footer>
+
+    <button class="open-button animate__animated animate__fadeIn" onclick="openForm()">
+        <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+    </button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <button type="button" class="open-button line animate__animated animate__fadeInUp">
+                <a href="#"><img title="Line" src="{{ url_for('static', filename='resources/images/icon/line.png')}}" alt="Line" class="img"></a>
+            </button>
+            <button type="button" class="open-button messenger animate__animated animate__fadeInUp">
+                <a href="#"><img title="Messenger" src="{{ url_for('static', filename='resources/images/icon/facebook messenger.png')}}" alt="Messenger" class="img"></a>
+            </button>
+            <button type="button" class="open-button whatsapp animate__animated animate__fadeInUp">
+                <a href="#"><img title="Whatsapp" src="{{ url_for('static', filename='resources/images/icon/whatsapp.png')}}" alt="Whatsapp" class="img"></a>
+            </button>
+            <button type="button" class="open-button animate__animated animate__fadeIn" onclick="closeForm()">
+                <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+</script>

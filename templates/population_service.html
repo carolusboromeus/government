@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}">
+    <title>Portal Papuaprov - Satu Portal untuk semua Hal Tentang Papua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/media.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a91a27e46f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="topbar fixed-top animate__animated animate__fadeInDown">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a title="TFU" href="/"><img src="{{ url_for('static', filename='resources/images/logo/PAPUAPROVGOID.png')}}" alt="there for you home page" id="tfu"></a>
+                </div>
+                <button class="navbar-toggler animate__animated animate__fadeInRight" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <hr class="clearfix w-100 d-md-none margin animate__animated animate__fadeIn">
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                              <a class="nav-link dropdown-toggle">
+                                    <p class="navbar-link">About</p>
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/history">Sejarah</a>
+                                <a class="dropdown-item" href="/resources">Sumber Daya Alam</a>
+                                <a class="dropdown-item" href="/demography">Demografi</a>
+                              </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Map</p>
+                                </a>
+                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/maps">Peta Daerah</a>
+                                  <a class="dropdown-item" href="/culinary_tourism">Wisata Kuliner</a>
+                                  <a class="dropdown-item" href="/historical_tourism">Wisata Sejarah</a>
+                                  <a class="dropdown-item" href="/natural_tourism">Wisata Alam</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle" href="/government">
+                                      <p class="navbar-link">Government</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/government#Gubernur&WakilGubernur">Gubernur dan Wakil Gubernur</a>
+                                  <a class="dropdown-item" href="/government#Visi&Misi">Visi dan Misi</a>
+                                  <a class="dropdown-item" href="/government#StrukturOrganisasi">Struktur Organisasi</a>
+                                  <a class="dropdown-item" href="/government#AlamatKantor">Alamat Kantor</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown d-none d-sm-none d-md-block">
+                                <a class="nav-link dropdown-toggle">
+                                      <p class="navbar-link">Services & Information</p>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="/population_service">Layanan Kependudukan</a>
+                                  <a class="dropdown-item" href="/healthcare_service">Layanan Kesehatan</a>
+                                  <a class="dropdown-item" href="/education_service">Layanan Pendidikan</a>
+                                </div>
+                            </li>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">About</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/history"><p class="navbar-link">Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/resources"><p class="navbar-link">Sumber Daya Alam</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/demography"><p class="navbar-link">Demografi</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Map</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/maps"><p class="navbar-link">Peta Daerah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/culinary_tourism"><p class="navbar-link">Wisata Kuliner</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/historical_tourism"><p class="navbar-link">Wisata Sejarah</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/natural_tourism"><p class="navbar-link">Wisata Alam</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none navbar-broder">
+                                <h2 class="title-navbar">Government</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Gubernur&WakilGubernur"><p class="navbar-link">Gubernur dan Wakil Gubernur</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#Visi&Misi"><p class="navbar-link">Visi dan Misi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#StrukturOrganisasi"><p class="navbar-link">Struktur Organisasi</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/government#AlamatKantor"><p class="navbar-link">Alamat Kantor</p></a>
+                                </li>
+                            </div>
+                            <div class="nav-item d-block d-sm-block d-md-none">
+                                <h2 class="title-navbar">Services & Information</h2>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/population_service"><p class="navbar-link">Layanan Kependudukan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/healthcare_service"><p class="navbar-link">Layanan Kesehatan</p></a>
+                                </li>
+                                <li class="nav-item d-block d-sm-block d-md-none">
+                                    <a class="nav-link" href="/education_service"><p class="navbar-link">Layanan Pendidikan</p></a>
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div style="padding-top: 80px;">
+        <div class="fluit-container">
+            <div class="margin">
+                <div class="center grid" style="background-image: url({{ url_for('static', filename='resources/images/service/kependudukan.png')}});">
+                    <h1 class="title2 text-center responsive-title" style="color: white;" data-aos="fade-down" data-aos-duration="800">Layanan Kependudukan</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fluit-container">
+        <div class="accordion" id="accordionMain" data-aos="fade">
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="text1">Kartu Tanda Penduduk</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseOne" class="card-body1 collapse show" aria-labelledby="headingOne">
+                    <div class="container">
+                        Kartu Tanda Penduduk (KTP) adalah identitas resmi seseorang sebagai penduduk Papua.
+                        Kartu ini wajib dimiliki oleh penduduk Papua Jakarta yang telah berusia 17 tahun dan/atau telah menikah.<br><br>
+                        Ada pula KTP berbasis NIK (dikenal dengan KTP Elektronik atau e-KTP) yang memiliki spesifikasi dan format KTP Nasional,
+                        dengan sistem pengamanan khusus yang berlaku sebagai identitas resmi, yang diterbitkan Dinas Kependudukan dan Pencatatan Sipil Provinsi Papua.
+                        <div class="accordion" id="accordionSubOne" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subOne">
+                                    <span class="text1">Fungsi dan Kegunaan KTP</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subOne" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        Fungsi utama Kartu Tanda Penduduk sebagai kartu identitas diri. Selain itu, KTP dapat digunakan untuk berbagai keperluan, di antaranya:
+                                        <ol style="margin-left: -25px;">
+                                            <li>Pembuatan Paspor.</li>
+                                            <li>Administrasi Buku Nikah.</li>
+                                            <li>Pembukaan Rekening Bank.</li>
+                                            <li>Pembuatan NPWP.</li>
+                                            <li>Pemilu.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseOne-subTwo">
+                                    <span class="text1">Pembuatan KTP</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseOne-subTwo" class="card-body1 collapse" data-parent="#accordionSubOne">
+                                    <div class="container">
+                                        <b>Lokasi Pelayanan : </b>Kantor Kelurahan.<br>
+                                        <b>Waktu Pelayanan : </b>14 (empat belas) hari.<br>
+                                        <b>Tarif : </b>Gratis.<br><br>
+                                        <b>Persyaratan :</b><br>
+                                        <ol type="A" style="margin-left: -25px;">
+                                            <li>
+                                                Pembuatan KTP baru diajukan dengan melengkapi syarat-syarat berikut:
+                                                <ol type="1" style="margin-left: -25px;">
+                                                    <li>Kartu Keluarga (KK) fotokopi dan asli.</li>
+                                                    <li>Kutipan Akta Kelahiran.</li>
+                                                    <li>Kutipan Akta Nikah/Akta Kawin bagi penduduk yang belum berusia 17 (tujuh belas) tahun.</li>
+                                                    <li>Paspor.</li>
+                                                    <li>Izin Tinggal Tetap.</li>
+                                                </ol>
+                                            </li><br>
+                                            <li>
+                                                Pembuatan KTP dilakukan selambat-lambatnya 14 hari sejak:
+                                                <ol type="1" style="margin-left: -25px;">
+                                                    <li>Tanggal berusia 17 (tujuh belas) tahun.</li>
+                                                    <li>Tanggal perkawinan jika menikah di bawah usia 17 (tujuh belas) tahun.</li>
+                                                    <li>Tanggal penerbitan Surat Keterangan Pindah Datang bagi penduduk yang datang dari luar daerah atau luar negeri.</li>
+                                                    <li>Tanggal pelaporan perubahan status kependudukan dari penduduk sementara Orang Asing menjadi penduduk.</li>
+                                                </ol>
+                                            </li><br>
+                                            <li>Penggantian KTP dilakukan selambat-lambatnya 14 (empat belas) hari sejak berakhir masa berlaku KTP.</li><br>
+                                            <li>
+                                                Masa Berlaku e-KTP yaitu:
+                                                <ol type="1" style="margin-left: -25px;">
+                                                    <li>Warga Negara Indonesia seumur hidup.</li>
+                                                    <li>Orang Asing disesuaikan dengan masa berlaku Izin Tinggal tetap.</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <span class="text2">Kartu Keluarga</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                </div>
+                <div id="collapseTwo" class="card-body2 collapse show" aria-labelledby="headingTwo">
+                    <div class="container">
+                        <b>Lokasi Pelayanan : </b>Kantor Kelurahan.<br>
+                        <b>Waktu Pelayanan : </b>14 (empat belas) hari kerja sejak tanggal diterimanya berkas persyaratan secara lengkap.<br>
+                        <b>Tarif : </b>Gratis.<br><br>
+                        <b>Kartu Keluarga </b>adalah Kartu Identitas Keluarga yang memuat data tentang susunan, hubungan, identitas, status, pekerjaan, dan jumlah anggota keluarga.
+                        Kartu Keluarga wajib dimiliki oleh setiap keluarga. Kartu ini berisi data lengkap tentang identitas Kepala Keluarga dan anggota keluarganya.<br>
+                        Kartu keluarga dicetak rangkap 4 yang masing-masing dipegang oleh:
+                        <ol style="margin-left: -25px;">
+                            <li>Kepala Keluarga (lembar pertama).</li>
+                            <li>Ketua Rukun Tetangga (lembar kedua).</li>
+                            <li>Kelurahan (lembar ketiga).</li>
+                            <li>Suku Dinas (lembar keempat).</li>
+                        </ol>
+                        <div class="accordion" id="accordionSubTwo" style="padding-top: 20px;">
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subOne">
+                                    <span class="text2">Manfaat Kartu Keluarga</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subOne" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Kartu Keluarga merupakan salah satu elemen penting bagi penduduk yang berkeluarga.
+                                        Selain menjadi bukti sah hubungan keluarga, Kartu Keluarga juga bermanfaat dan dibutuhkan,
+                                        misalnya untuk mendaftar sekolah, mendaftarkan pernikahan, atau mengajukan pinjaman bank.
+                                        Maka dari itu, Kartu Keluarga wajib untuk dimiliki oleh setiap warga negara Indonesia yang berkeluarga.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subTwo">
+                                    <span class="text2">Persyaratan Pembuatan Kartu Keluarga</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subTwo" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Untuk membuat Kartu Keluarga harus melengkapi syarat-syarat berikut:<br>
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Surat Pengantar RT/RW.</li>
+                                            <li>Biodata penduduk atau Kartu Tanda Penduduk.</li>
+                                            <li>Kartu Keluarga yang lama.</li>
+                                            <li>Dokumen asli dan fotokopi Kutipan Akta Perkawinan/Akta Nikah.</li>
+                                            <li>Dokumen asli dan fotokopi kartu Izin Tinggal Tetap bagi Orang Asing.</li>
+                                            <li>Surat Keterangan Pindah/Surat Keterangan Pindah Datang (SKP/SKPD).</li>
+                                            <li>Surat Keterangan Datang dari Luar Negeri (SKDLN) bagi WNI yang datang dari luar negeri.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subThree">
+                                    <span class="text2">Perubahan Data</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subThree" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Setiap terjadi perubahan data dalam Kartu Keluarga karena terjadi peristiwa kelahiran, kematian, kepindahan, dll,
+                                        Kepala Keluarga <b>wajib melaporkan</b> ke kelurahan dengan membawa dokumen persyaratan:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Surat Pengantar RT/RW.</li>
+                                            <li>Kartu Keluarga yang lama.</li>
+                                            <li>Dokumen asli dan fotokopi Surat Keterangan Kematian/Kutipan Akta Kematian.</li>
+                                            <li>Dokumen asli dan fotokopi Akta Perkawinan/Akta Perceraian jika ada penambahan atau pengurangan anggota keluarga karena menikah/bercerai.</li>
+                                            <li>Surat Keterangan Pindah bagi penduduk yang pindah.</li>
+                                            <li>Dokumen asli dan fotokopi Akta Kelahiran bagi anggota keluarga yang baru lahir.</li>
+                                        </ol>
+                                        Dari hasil pelaporan tersebut akan diterbitkan Kartu Keluarga baru.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subFour">
+                                    <span class="text2">Kepindahan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subFour" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Apabila suatu keluarga pindah seluruhnya ke tempat lain, maka Kartu Keluarga yang disimpan di Kepala Keluarga dan di Ketua RT harus diserahkan kepada Lurah (dicabut).
+                                        Di tempat tinggal yang baru, berdasarkan Surat Keterangan Pindah, Lurah akan memberi Kartu Keluarga yang baru.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseTwo-subFive">
+                                    <span class="text2">Perhatian</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseTwo-subFive" class="card-body2 collapse" data-parent="#accordionSubTwo">
+                                    <div class="container">
+                                        Kartu Keluarga adalah dokumen milik Pemerintah Provinsi Papua dan karena itu tidak boleh mencoret, merubah, mengganti,
+                                        menambah isi data yang tercantum dalam Kartu Keluarga.<br>
+                                        Setiap terjadi perubahan karena mutasi data dan mutasi biodata, wajib dilaporkan kepada Lurah dan akan diterbitkan Kartu Keluarga yang baru<br>
+                                        Pendatang baru yang belum mendaftarkan diri atau belum berstatus penduduk Papua, nama dan identitasnya tidak boleh dicantumkan dalam Kartu Keluarga.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <span class="text1">Akta Kelahiran</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseThree" class="card-body1 collapse show" aria-labelledby="headingThree">
+                    <div class="container">
+                        <b>Lokasi Pelayanan : </b>Kantor Kelurahan.<br>
+                        <b>Waktu Pelayanan : </b>5 (lima) hari kerja sejak tanggal penerimaan berkas persyaratan secara lengkap.<br>
+                        <b>Tarif : </b>Gratis.<br><br>
+                        <b>Akta Kelahiran</b> merupakan bukti sah mengenai status dan peristiwa kelahiran seseorang yang diterbitkan oleh
+                        Dinas Kependudukan dan Catatan Sipil (Disdukcapil).
+                        Bayi yang dilaporkan kelahirannya akan terdaftar dalam Kartu Keluarga dan diberi Nomor Induk Kependudukan (NIK)
+                        sebagai dasar untuk memperoleh pelayanan masyarakat lainnya.<br><br>
+                        Sesuai dengan Undang-Undang No. 24 Tahun 2013 tentang Perubahan atas Undang-Undang No. 23 Tahun 2006,
+                        pencatatan kelahiran yang sebelumnya berdasarkan atas peristiwa, berubah menjadi berdasarkan domisili.
+                        Dengan demikian, pencatatan dilakukan di instansi pelaksana sesuai domisili pelapor.<br><br>
+                        Hasil pelaporan kelahiran terwujud dalam bentuk Kartu Keluarga dan Akta Kelahiran.
+                        <div class="accordion" id="accordionSubThree" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subOne">
+                                    <span class="text1">Jenis Akta Kelahiran</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subOne" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Akta kelahiran digolongkan menurut jarak waktu pelaporan dengan kelahiran. Ada dua jenis akta kelahiran, yaitu:
+                                        <ul style="margin-left: -25px;">
+                                            <li>
+                                                <b>Akta Kelahiran Umum</b> merupakan akta kelahiran yang dibuat berdasarkan laporan kelahiran yang disampaikan dalam
+                                                batas waktu selambat-lambatnya 60 (enam puluh) hari kerja bagi WNI dan 10 (sepuluh) hari kerja
+                                                bagi WNA sejak tanggal kelahiran bayi.
+                                            </li>
+                                            <li>
+                                                <b>Akta Dengan Rekomendasi</b> merupakan akta kelahiran yang dibuat berdasarkan rekomendasi Kepala Disdukcapil
+                                                atas laporan kelahiran yang telah melampaui batas waktu 60 (enam puluh) hari kerja.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subTwo">
+                                    <span class="text1">Manfaat Akta Kelahiran</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subTwo" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Ada banyak sekali manfaat pembuatan Akta Kelahiran untuk seorang anak.
+                                        Selain sebagai pengakuan negara terhadap individu, Akta Kelahiran juga bermanfaat untuk pembuatan KTP, penyempurnaan Kartu Keluarga,
+                                        melamar sekolah, sebagai rujukan dokumen lain dari ijazah hingga lamaran kerja.<br><br>
+                                        <b>Permohonan Pelayanan Pencatatan Akta Kelahiran dapat dilakukan di:</b>
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Dinas Kependudukan dan Pencatatan Sipil.</li>
+                                            <li>Suku Dinas Kependudukan dan Pencatatan Sipil.</li>
+                                            <li>Seksi  Kecamatan Kependudukan dan Pencatatan Sipil.</li>
+                                            <li>Puskesmas Kecamatan.</li>
+                                            <li>Rumah Sakit.</li>
+                                            <li>Loket pelayanan lainnya.</li>
+                                        </ol>
+                                        <br><b>Persyaratan Pelayanan Pelaporan Kelahiran</b><br>
+                                        Untuk memperoleh Pelayanan Pelaporan Kelahiran harus memenuhi persyaratan berikut ini:
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Surat Keterangan Kelahiran dari Rumah Sakit/Dokter/Bidan/Pilot/Nahkoda.</li>
+                                            <li>Dokumen asli dan fotokopi KK bagi penduduk/SKSKPNP bagi penduduk nonpermanen.</li>
+                                            <li>Dokumen asli dan fotokopi KTP orang tua/SKDS/Surat Keterangan Pelaporan Tamu.</li>
+                                            <li>Dokumen asli dan fotokopi Surat Nikah/Akta Perkawinan orang tua.</li>
+                                            <li>Dokumen asli dan fotokopi paspor bagi Orang Asing.</li>
+                                            <li>Surat Keterangan Kepolisian untuk anak yang tidak diketahui asal-usulnya.</li>
+                                            <li>Surat keterangan dari lembaga sosial untuk kelahiran anak penduduk rentan.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subThree">
+                                    <span class="text1">Pelayanan Penerbitan Akta Kelahiran</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subThree" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        <b>Lokasi Pelayanan : </b>Suku Dinas Kependudukan dan Catatan Sipil Kota Administratif.<br>
+                                        <b>Waktu Pelayanan : </b>5 (lima) hari kerja sejak tanggal penerimaan berkas persyaratan secara lengkap.<br>
+                                        <b>Tarif : </b>Gratis.<br><br>
+                                        <b>Akta Kelahiran</b> adalah Akta Catatan Sipil hasil pencatatan peristiwa kelahiran seseorang.<br>
+                                        <br><b>Persyaratan Pelayanan Pelaporan Kelahiran</b><br>
+                                        Sangat disarankan mengurus akta kelahiran sesegera mungkin setelah bayi dilahirkan.
+                                        Adapun persyaratan untuk membuat akta kelahiran adalah sebagai berikut:
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Surat Keterangan Kelahiran dari Kelurahan.</li>
+                                            <li>Dokumen asli dan fotokopi Surat Keterangan Kelahiran dari dokter/bidan/penolong kelahiran/nakhoda kapal laut atau
+                                                pilot pesawat terbang dengan memperlihatkan aslinya.</li>
+                                            <li>Surat Nikah/Akta Perkawinan orang tua.</li>
+                                            <li>Fotokopi KK dan KTP orang tua.</li>
+                                            <li>Nama dan identitas saksi pelaporan kelahiran.</li>
+                                            <li>Persetujuan Kepala Dinas/Suku Dinas dalam hal pelaporannya melebihi 60 (enam puluh) hari sejak tanggal kelahiran.</li>
+                                        </ol>
+                                        Berdasarkan putusan Mahkamah Konstitusi Nomor 18/PUU-XI/2013 tanggal 14 Maret 2013,
+                                        ketentuan tentang batas waktu 1 (satu) tahun dan persyaratan penetapan pengadilan yang diisyaratkan dalam
+                                        pasal 32 Undang-Undang Nomor 23 Tahun 2006 dibatalkan.
+                                        Dengan demikian, pencatatan kelahiran yang melampaui batas 1 (satu) tahun sejak tanggal kelahiran tidak melalui penetapan pengadilan.<br><br>
+                                        Berdasarkan Undang-Undang No. 24 tahun 2013 tentang Perubahan atas Undang-Undang No. 23 Tahun 2006 tentang
+                                        Administrasi Kependudukan, pencatatan kelahiran wajib dilaporkan oleh penduduk di instansi pelaksana tempat peristiwa terjadi,
+                                        diubah menjadi wajib dilaporkan oleh penduduk di instansi pelaksana tempat penduduk berdomisili.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseThree-subFour">
+                                    <span class="text1">Bagaimana Jika Akta Hilang atau Rusak?</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseThree-subFour" class="card-body1 collapse" data-parent="#accordionSubThree">
+                                    <div class="container">
+                                        Jika akta hilang atau rusak, segera hubungi Suku Dinas Kependudukan dan Catatan Sipil Papua di Jalan  CMQR+6R6, Entrop,
+                                        Distrik Jayapura Selatan, Kota Jayapura, Papua 99223.<br>
+                                        <br><b>Dokumen yang Harus Dibawa</b><br>
+                                        Jika ingin menduplikasi kutipan akta yang hilang,
+                                        silakan membawa persyaratan berikut ini ke kantor Suku Dinas Kependudukan dan Catatan Sipil seperti yang tertera di atas:
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Surat pernyataan rusak/hilang dari yang bersangkutan.</li>
+                                            <li>Surat keterangan kehilangan dari kepolisian setempat.</li>
+                                            <li>Fotokopi kutipan akta yang hilang.</li>
+                                            <li>Menyerahkan kembali kutipan akta asli yang rusak.</li>
+                                            <li>Fotokopi KK Nasional dan KTP.</li>
+                                            <li>Penetapan Pengadilan mengenai ganti nama atau jenis kelamin.</li>
+                                            <li>Dokumen imigrasi bagi Orang Asing.</li>
+                                        </ol>
+                                        Khusus untuk duplikat akta kematian ditambah:
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Dokumen asli dan fotokopi Kutipan Akta Kelahiran ahli waris.</li>
+                                            <li>Surat pernyataan ahli waris dari pemohon.</li>
+                                            <li>Dokumen asli dan fotokopi KK Nasional dan KTP ahli waris.</li>
+                                            <li>Dokumen asli dan fotokopi Kutipan Akta Perkawinan/Surat Nikah.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <span class="text2">Akta Kematian</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                </div>
+                <div id="collapseFour" class="card-body2 collapse show" aria-labelledby="headingFour">
+                    <div class="container">
+                        <b>Lokasi Pelayanan : </b>
+                        <ol type="i" style="margin-left: -25px;">
+                            <li>Kantor Dinas Kependudukan dan Pencatatan Sipil Provinsi Papua.</li>
+                            <li>Kantor Suku Dinas Kependudukan dan Pencatatan Sipil.</li>
+                            <li>Kantor Kelurahan.</li>
+                        </ol>
+                        <b>Tarif : </b>Gratis.<br><br>
+                        <b>Akta Kematian </b>merupakan bukti sah berupa akta yang dibuat dan diterbitkan oleh Dinas Kependudukan dan Pencatatan Sipil,
+                        sebagai bukti tertulis terkait Pencatatan Kematian seseorang.
+                        Mengingat bahwa kematian adalah salah satu peristiwa yang pasti akan dialami oleh setiap orang,
+                        maka Pencatatan Kematian memiliki peranan yang sangat vital untuk dilakukan dan dikukuhkan oleh Negara dalam bentuk Akta Kematian.
+                        <div class="accordion" id="accordionSubFour" style="padding-top: 20px;">
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFour-subOne">
+                                    <span class="text2">Persyaratan Pelayanan Pencatatan Kematian</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseFour-subOne" class="card-body2 collapse" data-parent="#accordionSubFour">
+                                    <div class="container">
+                                        Untuk mendapatkan Pelayanan Pencatatan Kematian, harus melengkapi persyaratan berikut ini:
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Surat Keterangan Kematian dari Puskesmas/RS.</li>
+                                            <li>KK dan KTP asli dari yang meninggal.</li>
+                                            <li>Fotokopi KTP Pelapor dan 2 orang Saksi.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFour-subTwo">
+                                    <span class="text2">WNI Luar Negeri dapat Melakukan Pelaporan Pencatatan Kematian Melalui:</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseFour-subTwo" class="card-body2 collapse" data-parent="#accordionSubFour">
+                                    <div class="container">
+                                        <b>Lokasi Pelayanan : </b> Kantor Dinas Kependudukan dan Pencatatan Sipil Provinsi DKI Jakarta,
+                                        Jalan CMQR+6R6, Entrop, Distrik Jayapura Selatan, Kota Jayapura, Papua 99223.<br>
+                                        <b>Biaya : </b>Gratis.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFour-subThree">
+                                    <span class="text2">Persyaratan Pelayanan Pencatatan Kematian WNI Luar Negeri</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseFour-subThree" class="card-body2 collapse" data-parent="#accordionSubFour">
+                                    <div class="container">
+                                        Untuk mendapatkan Pelayanan Pencatatan Kematian WNI Luar Negeri, harus melengkapi persyaratan berikut ini:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Fotokopi Akta Kematian Luar Negeri (yang telah diterjemahkan oleh penerjemah resmi).</li>
+                                            <li>Fotokopi Surat Keterangan Kematian dari KBRI (Pengesahan dari Konjen RI/Kemenlu).</li>
+                                            <li>Fotokopi Paspor Indonesia.</li>
+                                            <li>Fotokopi KTP dan KK DKI Jakarta.</li>
+                                            <li>Surat Kuasa bermaterai Rp. 6.000,- (jika diwakilkan) dan Fotokopi KTP yang diberikan Kuasa.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFour-subFour">
+                                    <span class="text2">Penduduk Orang Asing dapat Melakukan Pelaporan Pencatatan Kematian Melalui:</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseFour-subFour" class="card-body2 collapse" data-parent="#accordionSubFour">
+                                    <div class="container">
+                                        <b>Lokasi Pelayanan : </b> Kantor Dinas Kependudukan dan Pencatatan Sipil Provinsi DKI Jakarta,
+                                        Jalan CMQR+6R6, Entrop, Distrik Jayapura Selatan, Kota Jayapura, Papua 99223.<br>
+                                        <b>Biaya : </b>Gratis.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFour-subFive">
+                                    <span class="text2">Persyaratan Pelayanan Pencatatan Kematian Penduduk Orang Asing</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseFour-subFive" class="card-body2 collapse" data-parent="#accordionSubFour">
+                                    <div class="container">
+                                        Untuk mendapatkan Pelayanan Pencatatan Kematian Penduduk Orang Asing, harus melengkapi persyaratan berikut ini:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Asli Surat Kematian dari Rumah Sakit.</li>
+                                            <li>Asli Surat Keterangan dari Kedubes.</li>
+                                            <li>Fotokopi Paspor.</li>
+                                            <li>Fotokopi KTP & KK bagi pemegang ITAP.</li>
+                                            <li>Fotokopi SKTT bagi Pemegang ITAS.</li>
+                                            <li>Fotokopi KTP 2 orang Saksi.</li>
+                                            <li>Surat Kuasa bermaterai Rp 6.000,- (jika diwakilkan) dan Fotokopi KTP yang diberikan Kuasa.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFour-subSix">
+                                    <span class="text2">Manfaat Akta Kematian</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseFour-subSix" class="card-body2 collapse" data-parent="#accordionSubFour">
+                                    <div class="container">
+                                        Kenyataannya, masih banyak masyarakat yang berpikir bahwa mengurus Akta Kematian bukanlah hal yang penting.
+                                        Padahal, Akta Kematian memberikan manfaat yang penting baik untuk pemerintah dan penduduk.
+                                        Bagi pemerintah, Akta Kematian berguna untuk validasi data kependudukan.
+                                        Dengan demikian, pemerintah memiliki data akurat terkait jumlah penduduk.<br><br>
+                                        Di sisi lain, penduduk akan mendapatkan beberapa manfaat dari Akta Kematian, di antaranya:
+                                        <ol type="i" style="margin-left: -25px;">
+                                            <li>Penetapan status janda atau duda (terutama bagi Pegawai Negeri) diperlukan sebagai syarat menikah lagi.</li>
+                                            <li>Untuk persyaratan pengurusan pembagian waris (Peralihan Hak Atas Tanah), baik bagi isteri atau suami maupun anak.</li>
+                                            <li>Diperlukan untuk mengurus pensiun bagi ahli warisnya.</li>
+                                            <li>Persyaratan untuk mengurus uang duka, tunjangan kecelakaan, Taspen, Asuransi, Perbankan, dan Pensiun.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    <span class="text1">Akta Perceraian</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                </div>
+                <div id="collapseFive" class="card-body1 collapse show" aria-labelledby="headingFive">
+                    <div class="container">
+                        <b>Lokasi Pelayanan : </b>Kantor Dinas/Suku Dinas Kependudukan dan Pencatatan Sipil (Disdukcapil).<br>
+                        <b>Waktu Pelayanan : </b>5 (lima) hari kerja terhitung sejak tanggal penerimaan berkas persyaratan secara lengkap.<br>
+                        <b>Tarif : </b>Gratis.<br><br>
+                        <b>Akta perceraian</b> adalah akta yang dikeluarkan oleh pengadilan agama sebagai bukti telah terjadi perceraian.<br><br>
+                        Dinas Kependudukan dan Catatan Sipil hanya melayani pencatatan perceraian bagi perkawinan yang telah berlangsung menurut tata cara/hukum agama selain Islam dan sudah memperoleh keputusan Pengadilan Negeri.
+                        <div class="accordion" id="accordionSubFive" style="padding-top: 20px;">
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFive-subOne">
+                                    <span class="text1">Persyaratan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseFive-subOne" class="card-body1 collapse" data-parent="#accordionSubFive">
+                                    <div class="container">
+                                        Adapun persyaratan pembuatan Akta Perceraian sebagai berikut:
+                                        <ol type="a" style="margin-left: -25px;">
+                                            <li>Keputusan Pengadilan yang mempunyai kekuatan hukum tetap.</li>
+                                            <li>Asli dan fotokopi kutipan Akta Perkawinan.</li>
+                                            <li>
+                                                Asli dan fotokopi KK serta KTP; sedangkan dan bagi orang asing melampirkan dokumen asli dan fotokopi antara lain:
+                                                <ol style="margin-left: -25px;">
+                                                    <li>Paspor.</li>
+                                                    <li>Dokumen imigrasi.</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card1 card-broder1">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseFive-subTwo">
+                                    <span class="text1">Kegunaan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon" style="color: white;"></i></span>
+                                </div>
+                                <div id="collapseFive-subTwo" class="card-body1 collapse" data-parent="#accordionSubFive">
+                                    <div class="container">
+                                        Bagi masyarakat, Akta Perceraian digunakan sebagai bukti sah putusnya perkawinan dan perubahan status sebagai janda atau duda cerai hidup.
+                                        Selain itu, Akta Perceraian juga dipakai untuk mengurus hak tunjangan anak dari suami istri,
+                                        harta gono-gini, dan perkawinan setelah perceraian.<br><br>
+                                        Bagi pemerintah, dengan pencatatan perceraian diperoleh statistik peristiwa yang dapat digunakan untuk
+                                        kepentingan pemantauan keluarga dan penetapan kebijakan pembangunan lainnya.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card2">
+                <div class="card-header container" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                    <span class="text2">Akta Perkawinan</span>
+                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                </div>
+                <div id="collapseSix" class="card-body2 collapse show" aria-labelledby="headingSix">
+                    <div class="container">
+                        <b>Lokasi Pelayanan : </b>
+                        <ol type="i" style="margin-left: -25px;">
+                            <li>Kantor Dinas Kependudukan dan Pencatatan Sipil Provinsi Papua.</li>
+                            <li>Kantor Suku Dinas Kependudukan dan Pencatatan Sipil.</li>
+                        </ol>
+                        <b>Tarif : </b>Gratis.
+                        <div class="accordion" id="accordionSubSix" style="padding-top: 20px;">
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseSix-subOne">
+                                    <span class="text2">Usia Perkawinan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseSix-subOne" class="card-body2 collapse" data-parent="#accordionSubSix">
+                                    <div class="container">
+                                        Sesuai dengan Undang-undang Nomor 1 Tahun 1974, usia perkawinan adalah 19 tahun bagi pria dan 16 tahun bagi wanita.<br><br>
+                                        Jika melangsungkan perkawinan pada usia di bawah 21 tahun, maka Anda harus memperoleh izin dari orang tua.
+                                        Apabila masih di bawah 19 tahun bagi pria dan di bawah usia 16 tahun bagi wanita,
+                                        maka Anda harus memperoleh dispensasi dari Pengadilan Negeri.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseSix-subTwo">
+                                    <span class="text2">Pencatatan Perkawinan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseSix-subTwo" class="card-body2 collapse" data-parent="#accordionSubSix">
+                                    <div class="container">
+                                        Akta Perkawinan adalah akta dibuat dan diterbitkan oleh Dinas Kependudukan yang membuktikan secara pasti tentang
+                                        Pencatatan Perkawinan seseorang, setelah ada perkawinan menurut agama atau kepercayaannya.<br><br>
+                                        Dinas Kependudukan dan Catatan Sipil Provinsi Papua melayani Pencatatan Perkawinan bagi
+                                        mereka yang telah melangsungkan perkawinan menurut hukum dan tata cara agama selain agama Islam.
+                                        Pencatatan Perkawinan didasarkan atas Undang-undang Nomor 1 Tahun 1974 tentang Perkawinan.<br><br>
+                                        Sesuai dengan Undang-Undang No. 24 Tahun 2013 tentang Perubahan atas Undang-Undang No. 23 Tahun 2006,
+                                        pencatatan perkawinan yang sebelumnya berdasarkan peristiwa berubah menjadi berdasarkan domisili.
+                                        Dengan demikian, pencatatan dilakukan di instansi pelaksana sesuai domisili pelapor.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseSix-subThree">
+                                    <span class="text2">Persyaratan Pencatatan Perkawinan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseSix-subThree" class="card-body2 collapse" data-parent="#accordionSubSix">
+                                    <div class="container">
+                                        Untuk memperoleh Pelayanan Pencatatan Perkawinan, harus melengkapi persyaratan berikut ini:
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Surat Keterangan dari Lurah sesuai domisili yang bersangkutan.</li>
+                                            <li>Surat Pemberkatan Perkawinan dari pemuka agama atau Surat Perkawinan Penghayat Kepercayaan yang ditandatangani oleh
+                                                pemuka penghayat kepercayaan bagi yang terlambat pelaporannya lebih dari 60 (enam puluh) hari sejak perkawinan.</li>
+                                            <li>Kartu Keluarga dan KTP suami dan istri.</li>
+                                            <li>Foto berwarna suami dan istri berdampingan ukuran 4 x 6 cm sebanyak 5 (lima) lembar.</li>
+                                            <li>Kutipan Akta Kelahiran suami dan istri.</li>
+                                            <li>Kutipan Akta Perceraian atau kutipan Akta Kematian suami/istri bagi mereka yang pernah kawin.</li>
+                                            <li>Pencatatan perkawinan yang tidak memiliki bukti perkawinan dikarenakan perkawinan adat,
+                                                maka pembuktian perkawinannya harus melalui proses Penetapan Pengadilan Negeri.</li>
+                                            <li>Legalisasi dari pemuka agama/pendeta/penghayat kepercayaan di tempat terjadi perkawinan bagi pencatatan perkawinan
+                                                yang melampaui batas waktu.</li>
+                                            <li>Dua orang saksi yang memenuhi syarat.</li>
+                                            <li>Bagi mempelai yang berusia di bawah 21 (dua puluh satu) tahun harus memiliki izin dari orang tua.</li>
+                                            <li>Surat Izin Pengadilan Negeri bagi calon mempelai di bawah usia 21 (dua puluh satu) tahun,
+                                                apabila tidak mendapat persetujuan dari orang tua.</li>
+                                            <li>Surat izin Pengadilan Negeri apabila calon mempelai pria di bawah usia 19 (sembilan belas) tahun
+                                                dan wanita di bawah usia 16 (enam belas) tahun.</li>
+                                            <li>Surat Keputusan Pengadilan Negeri yang telah mempunyai kekuatan hukum tetap bila ada sanggahan.</li>
+                                            <li>Dispensasi Camat apabila pelaksanaan pencatatan perkawinan kurang dari sepuluh hari sejak tanggal pengajuan permohonan.</li>
+                                            <li>Kutipan Akta Kelahiran Anak yang akan disahkan dalam perkawinan apabila ada.</li>
+                                            <li>Pengumuman perkawinan.</li>
+                                            <li>Akta Perjanjian Perkawinan dari Notaris yang disahkan pada saat pencatatan perkawinan oleh pegawai pencatat di Dinas dan Suku Dinas.</li>
+                                            <li>Surat Izin dari komandan bagi anggota TNI dan POLRI.</li>
+                                            <li>
+                                                Bagi Orang Asing melampirkan dokumen:
+                                                <ol type="i" style="margin-left: -25px;">
+                                                    <li>Paspor.</li>
+                                                    <li>KITAP/KITAS dari Imigrasi.</li>
+                                                    <li>SKLD dari Kepolisian.</li>
+                                                    <li>KTP/KKISKTI/SKDS pendaftaran orang asing dari Dinas.</li>
+                                                    <li>Surat Izin dari Kedutaan/Perwakilan Negara Asing.</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        <br><b>Dokumen tambahan yang perlu diperhatikan saat pendaftaran di KUA:</b>
+                                        <ul style="margin-left: -25px;">
+                                            <li>Fotokopi paspor yang lembarannya telah dicap (2 lembar).</li>
+                                            <li>Akta Kelahiran, asli dan fotokopi (2 lembar).</li>
+                                            <li>Surat izin dari Kedutaan, Konsulat, atau Perwakilan Negara Asing (2 lembar).</li>
+                                            <li>Surat Bukti Lunas Pajak bagi Anda yang bekerja di Indonesia (2 lembar).</li>
+                                            <li>Surat Keterangan dari Kantor Imigrasi dan Departemen Tenaga Kerja bagi Anda yang bekerja di Indonesia (2 lembar).</li>
+                                            <li>Surat Tanda Melapor Diri (STMD) dari Kepolisian (2 lembar).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseSix-subFour">
+                                    <span class="text2">Waktu Ideal Mencatatkan Perkawinan</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseSix-subFour" class="card-body2 collapse" data-parent="#accordionSubSix">
+                                    <div class="container">
+                                        <ul style="margin-left: -25px;">
+                                            <li>10 (sepuluh) hari kerja sejak tanggal pendaftaran.
+                                                Jika kurang dari 10 (sepuluh) hari kerja, harus dengan dispensasi dari camat yang harus ditandatangani Camat.</li>
+                                            <li>Pencatatan perkawinan Anda sebelum 1 (satu) bulan sejak perkawinan menurut agama dilangsungkan.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseSix-subFive">
+                                    <span class="text2">Pelaporan Perkawinan Luar Negeri</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseSix-subFive" class="card-body2 collapse" data-parent="#accordionSubSix">
+                                    <div class="container">
+                                        <b>Lokasi Pelayanan : </b> Kantor Dinas Kependudukan dan Pencatatan Sipil Provinsi Papua,
+                                        sesuai Peraturan Gubernur Nomor 93 tahun 2012 tentang Persyaratan dan Tata Cara Pendaftaran Penduduk dan Pencatatan Sipil.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card2 card-broder2">
+                                <div class="card-header container collapsed" data-toggle="collapse" data-target="#collapseSix-subSix">
+                                    <span class="text2">Persyaratan Pelaporan Perkawinan Luar Negeri:</span>
+                                    <span class="accicon"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </div>
+                                <div id="collapseSix-subSix" class="card-body2 collapse" data-parent="#accordionSubSix">
+                                    <div class="container">
+                                        <ol type="1" style="margin-left: -25px;">
+                                            <li>Asli dan fotokopi Akta Perkawinan Luar Negeri.</li>
+                                            <li>Asli dan fotokopi Surat Keterangan KBRI.</li>
+                                            <li>Fotokopi Akta Kelahiran suami/istri.</li>
+                                            <li>Fotokopi KTP DKI Jakarta suami/istri.</li>
+                                            <li>Fotokopi KK DKI Jakarta suami/istri.</li>
+                                            <li>Fotokopi Paspor WNA/WNI suami/istri.</li>
+                                            <li>Fotokopi Akta Perceraian (apabila cerai hidup).</li>
+                                            <li>Fotokopi Akta Kematian (apabila cerai mati).</li>
+                                            <li>Fotokopi berdampingan ukuran 4x6 (4 lembar).</li>
+                                            <li>Surat Kuasa bermeterai Rp6.000 (apabila dikuasakan).</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer font-small indigo">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-2 mx-auto">
+                    <a href="/"><img src="{{ url_for('static', filename='resources/images/logo/Logo Papua.png')}}" width="120px" style="padding-top: 20px;" class="d-none d-md-block"></a>
+                </div>
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Terbaru</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                            <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                            <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-2 mx-auto margin">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Berita Populer</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                          <a href="/News 01" class="footer-link">News 01</a>
+                        </li>
+                        <li>
+                          <a href="/News 02" class="footer-link">News 02</a>
+                        </li>
+                        <li>
+                          <a href="/News 03" class="footer-link">News 03</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-md-none">
+                <div class="col-md-4 mx-auto margin d-none d-md-block">
+                    <ul class="list-unstyled row">
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Facebook" src="{{ url_for('static', filename='resources/images/icon/facebook.png')}}" alt="Facebook" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Youtube" src="{{ url_for('static', filename='resources/images/icon/play button.png')}}" alt="Youtube" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Twitter" src="{{ url_for('static', filename='resources/images/icon/twitter.png')}}" alt="Twitter" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link"><img title="Instagram" src="{{ url_for('static', filename='resources/images/icon/instagram.png')}}" alt="Instagram" class="footer-media"></a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link"><img title="Email" src="{{ url_for('static', filename='resources/images/icon/gmail.png')}}" alt="Email" class="footer-media"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mx-auto margin d-md-none">
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-title">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="footer-link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Instargam</a>
+                        </li>
+                        <li>
+                            <a href="/form" class="footer-link">Email</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">© 2022 Copyright :
+            <a href="/" style="color: black;"> Pemerintah Daerah Provinsi Papua. All Rights Reserved</a>
+        </div>
+    </footer>
+
+    <button class="open-button animate__animated animate__fadeIn" onclick="openForm()">
+        <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+    </button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <button type="button" class="open-button line animate__animated animate__fadeInUp">
+                <a href="#"><img title="Line" src="{{ url_for('static', filename='resources/images/icon/line.png')}}" alt="Line" class="img"></a>
+            </button>
+            <button type="button" class="open-button messenger animate__animated animate__fadeInUp">
+                <a href="#"><img title="Messenger" src="{{ url_for('static', filename='resources/images/icon/facebook messenger.png')}}" alt="Messenger" class="img"></a>
+            </button>
+            <button type="button" class="open-button whatsapp animate__animated animate__fadeInUp">
+                <a href="#"><img title="Whatsapp" src="{{ url_for('static', filename='resources/images/icon/whatsapp.png')}}" alt="Whatsapp" class="img"></a>
+            </button>
+            <button type="button" class="open-button animate__animated animate__fadeIn" onclick="closeForm()">
+                <img title="Punya Pertanyaan?" src="{{ url_for('static', filename='resources/images/icon/chat.png')}}" alt="Chat" class="img">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+</script>
